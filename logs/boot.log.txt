@@ -1,0 +1,745 @@
+stage2_loader v2.22
+SPD I2C Address: 57
+Executing next!
+
+-----------------------------------------------------
+Stage 3 version: 2.22.0
+Commit ID: 6088bc3
+CVOS commit ID: bac1d521
+HAL commit ID: c72baea8
+Build date: Aug 23 2017 14:59:30
+-----------------------------------------------------
+
+agent_wakeup v2.10
+EEPROM Revision ID = 39
+Device ID = a324
+Device Info: v2sil-39-rc1
+Loading DT to 01100000 (25864 bytes)...
+Board config ID: alpine_v2_ubnt one nas v4.0
+Loading application to 01100000 (636808 bytes)...
+Executing application...
+
+
+U-Boot 2015.07-alpine_db-2.21-HAL (Dec 11 2019 - 03:05:06 +0800)
+
+I2C:   ready
+DRAM:  4 GiB
+Trace early: 0000000000ff0000, 10000
+
+   _
+  /_\  _ __  _ __   __ _ _ __  _   _ _ __ _ __   __ _
+ //_\\| '_ \| '_ \ / _` | '_ \| | | | '__| '_ \ / _` |
+/  _  \ | | | | | | (_| | |_) | |_| | |  | | | | (_| |
+\_/ \_/_| |_|_| |_|\__,_| .__/ \__,_|_|  |_| |_|\__,_|
+   __       _           |_|
+  / /  __ _| |__  ___
+ / /  / _` | '_ \/ __|
+/ /__| (_| | |_) \__ \
+\____/\__,_|_.__/|___/
+               ___             _
+ /\ /\        / __\ ___   ___ | |_
+/ / \ \_____ /__\/// _ \ / _ \| __|
+\ \_/ /_____/ \/  \ (_) | (_) | |_
+ \___/      \_____/\___/ \___/ \__|
+
+temprature: 41 degrees
+eeprom_per_device_init: no valid information found!
+power_init_board: EEPROM per device information is not valid - using defaults!
+SF: Detected MX25U25635F with page size 256 Bytes, erase size 4 KiB, total 32 MiB
+U-Boot script not found in TOC!
+Board config ID: alpine_v2_ubnt one nas v4.0
+Trace disabled
+NAND:  1024 MiB
+SF: Detected MX25U25635F with page size 256 Bytes, erase size 4 KiB, total 32 MiB
+PCI:
+  00:01.0     - 1c36:0001 - Network controller
+  00:02.0     - 1c36:0002 - Network controller
+  00:04.0     - 1c36:0022 - Cryptographic device
+  00:05.0     - 1c36:0022 - Mass storage controller
+  00:08.0     - 1c36:0031 - Mass storage controller
+  00:09.0     - 1c36:0031 - Mass storage controller
+PCIE_0: Link up. Speed 5GT/s Width x1
+PCI:
+  01:00.0     - 1b21:1142 - Serial bus controller
+In:    serial
+Out:   serial
+Err:   serial
+dtt_get_temp[0] 95
+dtt_get_temp[1] 95
+dtt_get_temp[2] 89
+Net:   , al_eth1 [PRIME], al_eth2
+gpio: pin 37 (gpio 37) value is 0
+Setting bus to 4
+SF: Detected MX25U25635F with page size 256 Bytes, erase size 4 KiB, total 32 MiB
+device 0 offset 0x1f0000, size 0x12
+SF: 18 bytes @ 0x1f0000 Read: OK
+Saving Environment to SPI Flash...
+SF: Detected MX25U25635F with page size 256 Bytes, erase size 4 KiB, total 32 MiB
+Erasing SPI flash...Writing to SPI flash...done
+Valid environment: 2
+Autobooting in 2 seconds, press "<Esc><Esc>" to stop
+bootargs=pci=pcie_bus_perf console=ttyS0,115200 model=unas_4b
+device 0 offset 0x300000, size 0x3fd00000
+do_nand: set partition base address to=300000
+
+NAND read: device 0 offset 0x300000, size 0x4
+ 4 bytes read: OK
+
+NAND read: device 0 offset 0x300000, size 0xb2bef5
+ 11714293 bytes read: OK
+device 0 whole chip
+do_nand: set partition base address to=0
+## Booting kernel from Legacy Image at 08000004 ...
+   Image Name:   4.1.37-ubnt @ 20200307-052245
+   Image Type:   AArch64 Linux Kernel Image (gzip compressed)
+   Data Size:    11714225 Bytes = 11.2 MiB
+   Load Address: 04080000
+   Entry Point:  04080000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 04078000
+   Booting using the fdt blob at 0x4078000
+   Uncompressing Kernel Image ... OK
+   reserving fdt memory region: addr=0 size=100000
+   Using Device Tree in place at 0000000004078000, end 0000000004081507
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 4.1.37-ubnt (bdd@builder) (gcc version 6.3.0 20170516 (Debian 6.3.0-18) ) #4 SMP Sat Mar 7 05:22:19 CST 2020
+[    0.000000] Detected PIPT I-cache on CPU0
+[    0.000000] Ignoring memory range 0x0 - 0x4000000
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv0.2 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] PERCPU: Embedded 17 pages/cpu @ffffffc23bf5b000 s32216 r8192 d29224 u69632
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 1016064
+[    0.000000] Kernel command line: pci=pcie_bus_perf console=ttyS0,115200 model=unas_4b
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes)
+[    0.000000] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.000000] software IO TLB [mem 0xbbfff000-0xbffff000] (64MB) mapped at [ffffffc0b7fff000-ffffffc0bbffefff]
+[    0.000000] Memory: 3972352K/4128768K available (7110K kernel code, 915K rwdata, 2792K rodata, 6816K init, 347K bss, 156416K reserved, 0K cma-reserved)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vmalloc : 0xffffff8000000000 - 0xffffffbdbfff0000   (   246 GB)
+[    0.000000]     vmemmap : 0xffffffbdc0000000 - 0xffffffbfc0000000   (     8 GB maximum)
+[    0.000000]               0xffffffbdc0100000 - 0xffffffbdc9000000   (   143 MB actual)
+[    0.000000]     fixed   : 0xffffffbffabfd000 - 0xffffffbffac00000   (    12 KB)
+[    0.000000]     PCI I/O : 0xffffffbffae00000 - 0xffffffbffbe00000   (    16 MB)
+[    0.000000]     modules : 0xffffffbffc000000 - 0xffffffc000000000   (    64 MB)
+[    0.000000]     memory  : 0xffffffc000000000 - 0xffffffc23c000000   (  9152 MB)
+[    0.000000]       .init : 0xffffffc000a2e000 - 0xffffffc0010d6000   (  6816 KB)
+[    0.000000]       .text : 0xffffffc000080000 - 0xffffffc000a2d3e4   (  9909 KB)
+[    0.000000]       .data : 0xffffffc0010dd000 - 0xffffffc0011c1c00   (   915 KB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] 	Additional per-CPU info printed with stalls.
+[    0.000000] NR_IRQS:64 nr_irqs:64 0
+[    0.000000] CPU0: found redistributor 0 region 0:0x00000000f0280000
+[    0.000000] Architected cp15 timer(s) running at 58.33MHz (phys).
+[    0.000000] clocksource arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x1ae82a6a7f, max_idle_ns: 881590413063 ns
+[    0.000002] sched_clock: 56 bits at 58MHz, resolution 17ns, wraps every 4398046511097ns
+[    0.000110] Console: colour dummy device 80x25
+[    0.000119] Calibrating delay loop (skipped), value calculated using timer frequency.. 116.66 BogoMIPS (lpj=583333)
+[    0.000124] pid_max: default: 32768 minimum: 301
+[    0.000160] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.000164] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.000434] Initializing cgroup subsys blkio
+[    0.000440] Initializing cgroup subsys memory
+[    0.000451] Initializing cgroup subsys devices
+[    0.000455] Initializing cgroup subsys freezer
+[    0.000551] hw perfevents: enabled with arm/armv8-pmuv3 PMU driver, 7 counters available
+[    0.000565] EFI services will not be available.
+[    0.001025] Detected PIPT I-cache on CPU1
+[    0.001030] CPU1: found redistributor 1 region 0:0x00000000f02a0000
+[    0.001162] Detected PIPT I-cache on CPU2
+[    0.001165] CPU2: found redistributor 2 region 0:0x00000000f02c0000
+[    0.001291] Detected PIPT I-cache on CPU3
+[    0.001294] CPU3: found redistributor 3 region 0:0x00000000f02e0000
+[    0.001323] Brought up 4 CPUs
+[    0.001335] SMP: Total of 4 processors activated.
+[    0.001337] CPU: All CPU(s) started at EL2
+[    0.001523] devtmpfs: initialized
+[    0.004019] DMI not present or invalid.
+[    0.004101] clocksource jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.004254] xor: measuring software checksum speed
+[    0.099972]    8regs     :  7235.200 MB/sec
+[    0.199988]    8regs_prefetch:  6315.600 MB/sec
+[    0.300004]    32regs    :  7961.200 MB/sec
+[    0.400021]    32regs_prefetch:  6692.800 MB/sec
+[    0.400024] xor: using function: 32regs (7961.200 MB/sec)
+[    0.400295] NET: Registered protocol family 16
+[    0.430038] cpuidle: using governor ladder
+[    0.460043] cpuidle: using governor menu
+[    0.460065] vdso: 2 pages (1 code @ ffffffc0010e5000, 1 data @ ffffffc0010e4000)
+[    0.460079] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.460133] DMA: preallocated 256 KiB pool for atomic allocations
+[    0.460192] Initializing System Fabric
+[    0.660132] raid6: int64x1  gen()   928 MB/s
+[    0.830123] raid6: int64x1  xor()   959 MB/s
+[    1.000188] raid6: int64x2  gen()  1289 MB/s
+[    1.170188] raid6: int64x2  xor()  1345 MB/s
+[    1.340203] raid6: int64x4  gen()  1743 MB/s
+[    1.510249] raid6: int64x4  xor()  1501 MB/s
+[    1.680286] raid6: int64x8  gen()  2296 MB/s
+[    1.850292] raid6: int64x8  xor()  1411 MB/s
+[    2.020345] raid6: neonx1   gen()  1898 MB/s
+[    2.190363] raid6: neonx2   gen()  2544 MB/s
+[    2.360386] raid6: neonx4   gen()  3422 MB/s
+[    2.530415] raid6: neonx8   gen()  3808 MB/s
+[    2.530417] raid6: using algorithm neonx8 gen() 3808 MB/s
+[    2.530420] raid6: using intx1 recovery algorithm
+[    2.530519] vgaarb: loaded
+[    2.530610] SCSI subsystem initialized
+[    2.530740] usbcore: registered new interface driver usbfs
+[    2.530757] usbcore: registered new interface driver hub
+[    2.530774] usbcore: registered new device driver usb
+[    2.550423] pca953x 0-0029: failed reading register
+[    2.550429] pca953x: probe of 0-0029 failed with error -121
+[    2.550518] EDAC MC: Ver: 3.0.0
+[    2.550823] Switched to clocksource arch_sys_counter
+[    2.561591] FS-Cache: Loaded
+[    2.564037] NET: Registered protocol family 2
+[    2.564247] TCP established hash table entries: 32768 (order: 6, 262144 bytes)
+[    2.564322] TCP bind hash table entries: 32768 (order: 7, 524288 bytes)
+[    2.564452] TCP: Hash tables configured (established 32768 bind 32768)
+[    2.564482] UDP hash table entries: 2048 (order: 4, 65536 bytes)
+[    2.564503] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes)
+[    2.564579] NET: Registered protocol family 1
+[    2.564684] RPC: Registered named UNIX socket transport module.
+[    2.564687] RPC: Registered udp transport module.
+[    2.564689] RPC: Registered tcp transport module.
+[    2.564691] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    2.715810] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    2.715850] audit: initializing netlink subsys (disabled)
+[    2.715867] audit: type=2000 audit(2.709:1): initialized
+[    2.716067] HugeTLB registered 2 MB page size, pre-allocated 0 pages
+[    2.718949] VFS: Disk quotas dquot_6.6.0
+[    2.719016] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    2.719987] FS-Cache: Netfs 'nfs' registered for caching
+[    2.720193] NFS: Registering the id_resolver key type
+[    2.720204] Key type id_resolver registered
+[    2.720207] Key type id_legacy registered
+[    2.720216] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    2.720226] Installing knfsd (copyright (C) 1996 okir@monad.swb.de).
+[    2.720500] SGI XFS with security attributes, no debug enabled
+[    2.722369] alg: No test for stdrng (krng)
+[    2.722386] async_tx: api initialized (async)
+[    2.722413] bounce: pool size: 64 pages
+[    2.722483] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+[    2.722515] io scheduler noop registered
+[    2.722521] io scheduler deadline registered (default)
+[    2.722538] io scheduler cfq registered
+[    2.722673] pl061_gpio fd887000.gpio0: PL061 GPIO chip @0x00000000fd887000 registered
+[    2.722735] pl061_gpio fd888000.gpio1: PL061 GPIO chip @0x00000000fd888000 registered
+[    2.722791] pl061_gpio fd889000.gpio2: PL061 GPIO chip @0x00000000fd889000 registered
+[    2.722847] pl061_gpio fd88a000.gpio3: PL061 GPIO chip @0x00000000fd88a000 registered
+[    2.722903] pl061_gpio fd88b000.gpio4: PL061 GPIO chip @0x00000000fd88b000 registered
+[    2.722963] pl061_gpio fd897000.gpio5: PL061 GPIO chip @0x00000000fd897000 registered
+[    2.723023] al-sgpo fd8b4000.sgpo: Alpine SGPO driver probed.
+[    2.723083] PCI host bridge /soc/pcie-internal ranges:
+[    2.723093]   MEM 0xfe000000..0xfeffffff -> 0xfe000000
+[    2.723144] al-internal-pcie fbc00000.pcie-internal: PCI host bridge to bus 0000:00
+[    2.723148] pci_bus 0000:00: root bus resource [bus 00]
+[    2.723152] pci_bus 0000:00: root bus resource [mem 0xfe000000-0xfeffffff]
+[    2.723337] pci 0000:00:02.0: VF(n) BAR0 space: [mem 0x00000000-0x0005ffff 64bit] (contains BAR0 for 3 VFs)
+[    2.723471] pci 0000:00:04.0: VF(n) BAR0 space: [mem 0x00000000-0x0001ffff 64bit] (contains BAR0 for 1 VFs)
+[    2.723587] pci 0000:00:05.0: VF(n) BAR0 space: [mem 0x00000000-0x0001ffff 64bit] (contains BAR0 for 1 VFs)
+[    2.724260] pci 0000:00:01.0: BAR 0: assigned [mem 0xfe000000-0xfe01ffff 64bit]
+[    2.724266] pci 0000:00:02.0: BAR 0: assigned [mem 0xfe020000-0xfe03ffff 64bit]
+[    2.724272] pci 0000:00:02.0: BAR 7: assigned [mem 0xfe040000-0xfe09ffff 64bit]
+[    2.724277] pci 0000:00:04.0: BAR 0: assigned [mem 0xfe0a0000-0xfe0bffff 64bit]
+[    2.724282] pci 0000:00:04.0: BAR 7: assigned [mem 0xfe0c0000-0xfe0dffff 64bit]
+[    2.724287] pci 0000:00:05.0: BAR 0: assigned [mem 0xfe0e0000-0xfe0fffff 64bit]
+[    2.724292] pci 0000:00:05.0: BAR 7: assigned [mem 0xfe100000-0xfe11ffff 64bit]
+[    2.724297] pci 0000:00:02.0: BAR 4: assigned [mem 0xfe120000-0xfe12ffff 64bit]
+[    2.724302] pci 0000:00:04.0: BAR 4: assigned [mem 0xfe130000-0xfe13ffff 64bit]
+[    2.724307] pci 0000:00:05.0: BAR 4: assigned [mem 0xfe140000-0xfe14ffff 64bit]
+[    2.724312] pci 0000:00:01.0: BAR 4: assigned [mem 0xfe150000-0xfe153fff 64bit]
+[    2.724317] pci 0000:00:08.0: BAR 5: assigned [mem 0xfe154000-0xfe157fff]
+[    2.724321] pci 0000:00:09.0: BAR 5: assigned [mem 0xfe158000-0xfe15bfff]
+[    2.724325] pci 0000:00:01.0: BAR 2: assigned [mem 0xfe15c000-0xfe15cfff 64bit]
+[    2.724330] pci 0000:00:02.0: BAR 2: assigned [mem 0xfe15d000-0xfe15dfff 64bit]
+[    2.724434] al-external-pcie fd800000.pcie-external0: annapurna labs msi-parent: ffffffc237007180
+[    2.724441] al-external-pcie fd800000.pcie-external0: link up: speed Gen 2 width x1
+[    2.724445] PCIe 0: setting OB iATU even after link is started
+[    2.724492] al-external-pcie fd800000.pcie-external0: PCI host bridge to bus 0001:00
+[    2.724496] pci_bus 0001:00: root bus resource [io  0x10000-0x1ffff]
+[    2.724500] pci_bus 0001:00: root bus resource [mem 0xc0010000-0xc7ffffff]
+[    2.724503] pci_bus 0001:00: root bus resource [bus 00-ff]
+[    2.724640] pci 0001:00:00.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+[    2.724897] pci 0001:00:00.0: BAR 0: assigned [mem 0xc0100000-0xc01fffff]
+[    2.724902] pci 0001:00:00.0: BAR 14: assigned [mem 0xc0200000-0xc02fffff]
+[    2.724905] pci 0001:00:00.0: BAR 1: assigned [mem 0xc0010000-0xc001ffff]
+[    2.724910] pci 0001:00:00.0: BAR 6: assigned [mem 0xc0020000-0xc002ffff pref]
+[    2.724914] pci 0001:01:00.0: BAR 0: assigned [mem 0xc0200000-0xc0207fff 64bit]
+[    2.724925] pci 0001:00:00.0: PCI bridge to [bus 01]
+[    2.724929] pci 0001:00:00.0:   bridge window [mem 0xc0200000-0xc02fffff]
+[    2.724938] pci 0001:00:00.0: Max Payload Size set to  256/ 256 (was  128), Max Read Rq  256
+[    2.724955] pci 0001:01:00.0: Max Payload Size set to  256/ 512 (was  128), Max Read Rq  256
+[    2.724974] al_dma: Annapurna Labs DMA Driver 0.01
+[    2.724984] al_dma 0000:00:05.0: writing to VF config space
+[    2.724995] al_dma 0000:00:05.0: enabling device (0000 -> 0002)
+[    2.830909] al_dma 0000:00:05.1: enabling device (0400 -> 0402)
+[    2.837340] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    2.837839] console [ttyS0] disabled
+[    2.837855] fd883000.uart0: ttyS0 at MMIO 0xfd883000 (irq = 153, base_baud = 31250000) is a 16550A
+[    3.935001] console [ttyS0] enabled
+[    3.938633] fd884000.uart1: ttyS1 at MMIO 0xfd884000 (irq = 154, base_baud = 31250000) is a 16550A
+[    3.947726] fd885000.uart2: ttyS2 at MMIO 0xfd885000 (irq = 155, base_baud = 31250000) is a 16550A
+[    3.957323] ahci 0000:00:08.0: enabling device (0000 -> 0002)
+[    3.963080] ahci 0000:00:08.0: controller can't do PMP, turning off CAP_PMP
+[    3.970121] ahci 0000:00:08.0: failed to get fault-led -22
+[    3.975607] ahci 0000:00:08.0: failed to get fault-led -22
+[    3.981159] ahci 0000:00:08.0: AHCI 0001.0300 32 slots 4 ports 6 Gbps 0xf impl SATA mode
+[    3.989238] ahci 0000:00:08.0: flags: 64bit ncq sntf pm led clo only fbs pio slum part ccc apst 
+[    3.998748] scsi host0: ahci
+[    4.001767] scsi host1: ahci
+[    4.004751] scsi host2: ahci
+[    4.007734] scsi host3: ahci
+[    4.010677] ata1: SATA max UDMA/133 abar m16384@0xfe154000 port 0xfe154100 irq 206
+[    4.018242] ata2: SATA max UDMA/133 abar m16384@0xfe154000 port 0xfe154180 irq 207
+[    4.025802] ata3: SATA max UDMA/133 abar m16384@0xfe154000 port 0xfe154200 irq 208
+[    4.033361] ata4: SATA max UDMA/133 abar m16384@0xfe154000 port 0xfe154280 irq 209
+[    4.040943] ahci 0000:00:09.0: enabling device (0000 -> 0002)
+[    4.046689] ahci 0000:00:09.0: controller can't do PMP, turning off CAP_PMP
+[    4.053723] ahci 0000:00:09.0: failed to get fault-led -22
+[    4.059200] ahci 0000:00:09.0: failed to get fault-led -22
+[    4.064745] ahci 0000:00:09.0: AHCI 0001.0300 32 slots 4 ports 6 Gbps 0xf impl SATA mode
+[    4.072828] ahci 0000:00:09.0: flags: 64bit ncq sntf pm led clo only fbs pio slum part ccc apst 
+[    4.082317] scsi host4: ahci
+[    4.085301] scsi host5: ahci
+[    4.088280] scsi host6: ahci
+[    4.091270] scsi host7: ahci
+[    4.094215] ata5: SATA max UDMA/133 abar m16384@0xfe158000 port 0xfe158100 irq 207
+[    4.101778] ata6: SATA max UDMA/133 abar m16384@0xfe158000 port 0xfe158180 irq 208
+[    4.109336] ata7: SATA max UDMA/133 abar m16384@0xfe158000 port 0xfe158200 irq 209
+[    4.116896] ata8: SATA max UDMA/133 abar m16384@0xfe158000 port 0xfe158280 irq 210
+[    4.124465] ahci 0001:00:00.0: writing to VF config space
+[    4.129873] ahci: probe of 0001:00:00.0 failed with error -22
+[    4.135776] al_nand_probe: AnnapurnaLabs nand driver
+[    4.141037] nand: device found, Manufacturer ID: 0x2c, Chip ID: 0xa3
+[    4.147379] nand: Micron MT29F8G08ABBCAH4
+[    4.151386] nand: 1024 MiB, SLC, erase size: 256 KiB, page size: 4096, OOB size: 224
+[    4.159124] Scanning device for bad blocks
+[    4.317239] 5 ofpart partitions found on MTD device Alpine nand flash
+[    4.323677] Creating 5 MTD partitions on "Alpine nand flash":
+[    4.329416] 0x000000000000-0x000000200000 : "al_boot"
+[    4.334745] 0x000000200000-0x000000300000 : "device_tree"
+[    4.340357] 0x000000300000-0x000001300000 : "linux_kernel"
+[    4.346056] 0x000001300000-0x00003ff00000 : "rootfs"
+[    4.351328] 0x00003ff00000-0x000040000000 : "chike"
+[    4.356632] m25p80 spi0.0: found mx25u25635f, expected spi_flash_jedec_detection
+[    4.364037] m25p80 spi0.0: mx25u25635f (32768 Kbytes)
+[    4.369918] 7 ofpart partitions found on MTD device spi0.0
+[    4.375401] Creating 7 MTD partitions on "spi0.0":
+[    4.380184] 0x000000000000-0x0000001c0000 : "u-boot"
+[    4.385413] 0x0000001c0000-0x0000001d0000 : "u-boot env"
+[    4.390942] 0x0000001d0000-0x0000001e0000 : "u-boot env redundant"
+[    4.397329] 0x0000001e0000-0x0000001f0000 : "Factory"
+[    4.400831] ata2: SATA link down (SStatus 0 SControl 300)
+[    4.400843] ata3: SATA link down (SStatus 0 SControl 300)
+[    4.400854] ata1: SATA link down (SStatus 0 SControl 300)
+[    4.400861] ata4: SATA link down (SStatus 0 SControl 300)
+[    4.424161] 0x0000001f0000-0x000000200000 : "EEPROM"
+[    4.429331] 0x000000200000-0x000001200000 : "recovery kernel"
+[    4.435295] 0x000001200000-0x000002000000 : "config"
+[    4.440534] al_eth 0000:00:01.0: writing to VF config space
+[    4.446111] al_eth 0000:00:01.0: AnnapurnaLabs unified 1GbE and 10GbE Ethernet Driver al_eth v0.2 (Mar 29, 2016)
+[    4.456277] al_eth 0000:00:01.0: driver_data is 0x0
+[    4.461207] al_eth 0000:00:01.0: Board info: phy exist Yes. phy addr 4. mdio freq 1000 Khz. SFP connected No. media 1
+[    4.477511] al_eth 0000:00:01.0 eth0: AnnapurnaLabs unified 1Gbe/10Gbe found at mem fe000000, mac addr f4:92:bf:86:27:2c
+[    4.480828] ata6: SATA link down (SStatus 0 SControl 300)
+[    4.480837] ata8: SATA link down (SStatus 0 SControl 300)
+[    4.480845] ata5: SATA link down (SStatus 0 SControl 300)
+[    4.480853] ata7: SATA link down (SStatus 0 SControl 300)
+[    4.509927] al_eth 0000:00:02.0: writing to VF config space
+[    4.515502] al_eth 0000:00:02.0: driver_data is 0x0
+[    4.520423] al_eth 0000:00:02.0: Board info: phy exist No. phy addr 0. mdio freq 2500 Khz. SFP connected Yes. media 5
+[    4.536724] al_eth 0000:00:02.0 eth1: AnnapurnaLabs unified 1Gbe/10Gbe found at mem fe020000, mac addr f6:92:bf:86:27:2c
+[    4.547614] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    4.554136] ehci-pci: EHCI PCI platform driver
+[    4.558590] ehci-platform: EHCI generic platform driver
+[    4.563850] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    4.570024] ohci-pci: OHCI PCI platform driver
+[    4.574477] uhci_hcd: USB Universal Host Controller Interface driver
+[    4.580871] xhci_hcd 0001:01:00.0: enabling device (0000 -> 0002)
+[    4.586972] xhci_hcd 0001:01:00.0: xHCI Host Controller
+[    4.592199] xhci_hcd 0001:01:00.0: new USB bus registered, assigned bus number 1
+[    4.733592] xhci_hcd 0001:01:00.0: hcc params 0x0200e081 hci version 0x100 quirks 0x00000010
+[    4.742388] hub 1-0:1.0: USB hub found
+[    4.746142] hub 1-0:1.0: 2 ports detected
+[    4.750269] xhci_hcd 0001:01:00.0: xHCI Host Controller
+[    4.755497] xhci_hcd 0001:01:00.0: new USB bus registered, assigned bus number 2
+[    4.762939] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+[    4.771208] hub 2-0:1.0: USB hub found
+[    4.774961] hub 2-0:1.0: 2 ports detected
+[    4.779130] usbcore: registered new interface driver usb-storage
+[    4.785176] usbcore: registered new interface driver usbserial
+[    4.791018] usbcore: registered new interface driver cp210x
+[    4.796589] usbserial: USB Serial support registered for cp210x
+[    4.802550] i2c /dev entries driver
+[    4.809220] rtc-s35390a 1-0030: rtc core: registered rtc-s35390a as rtc0
+[    4.815926] i2c i2c-0: Added multiplexed i2c bus 1
+[    4.820785] i2c i2c-0: Added multiplexed i2c bus 2
+[    4.825642] i2c i2c-0: Added multiplexed i2c bus 3
+[    4.830525] i2c i2c-0: Added multiplexed i2c bus 4
+[    4.835313] pca954x 0-0071: registered 4 multiplexed busses for I2C switch pca9546
+[    4.842992] ubnt-hdd-pwrctl soc:hdd_pwrctl1: pwren 480, present 484, fault-led 492, pwren delay 500
+[    4.853247] ubnt-hdd-pwrctl soc:hdd_pwrctl2: pwren 464, present 468, fault-led 476, pwren delay 500
+[    4.862286] ubnt-hdd-pwrctl soc:hdd_pwrctl2: Failed to request gpio 468 pin: -517
+[    4.872933] adt7475 4-002e: ADT7475 device, revision 1
+[    4.878062] adt7475 4-002e: Optional features: fan4 pwm2
+[    4.893446] al_thermal_probe: Thermal Sensor Loaded at: 0xffffff800041aa00.
+[    4.900412] md: linear personality registered for level -1
+[    4.905894] md: raid0 personality registered for level 0
+[    4.911201] md: raid1 personality registered for level 1
+[    4.916567] md: raid6 personality registered for level 6
+[    4.921874] md: raid5 personality registered for level 5
+[    4.927176] md: raid4 personality registered for level 4
+[    4.932654] device-mapper: ioctl: 4.31.0-ioctl (2015-3-12) initialised: dm-devel@redhat.com
+[    4.941030] al_mc_edac f0080000.mc: No ECC present, or ECC disabled
+[    4.947519] al_crypto: Annapurna Labs Crypto Driver 0.01
+[    4.952836] al_crypto 0000:00:04.0: writing to VF config space
+[    4.958667] al_crypto 0000:00:04.0: enabling device (0000 -> 0002)
+[    5.091168] usb 2-1: new SuperSpeed USB device number 2 using xhci_hcd
+[    5.127531] usb-storage 2-1:1.0: USB Mass Storage device detected
+[    5.133755] scsi host8: usb-storage 2-1:1.0
+[    5.180930] al_crypto 0000:00:04.1: enabling device (0400 -> 0402)
+[    5.294205] al_crypto 0000:00:04.1: al_crypto_pci_probe: Skipping alg/hash initialization, no allocated channels
+[    5.304771] al_crypto 0000:00:04.1: crc/csum algorithms registered in /proc/crypto
+[    5.316580] alg: No test for authenc(hmac(sha384),cbc(aes)) (authenc-hmac-sha384-cbc-aes-al)
+[    5.325325] al_crypto 0000:00:04.0: algorithms registered in /proc/crypto
+[    5.335332] al_crypto 0000:00:04.0: hash algorithms registered in /proc/crypto
+[    5.342552] al_crypto 0000:00:04.0: al_crypto_pci_probe: Skipping crc initialization, no allocated channels
+[    5.352534] usbcore: registered new interface driver usbhid
+[    5.358096] usbhid: USB HID core driver
+[    5.362016] Initializing XFRM netlink socket
+[    5.366496] NET: Registered protocol family 10
+[    5.371272] sit: IPv6 over IPv4 tunneling driver
+[    5.376075] NET: Registered protocol family 17
+[    5.380517] NET: Registered protocol family 15
+[    5.384977] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
+[    5.397596] Key type dns_resolver registered
+[    5.402090] registered taskstats version 1
+[    5.409792] Key type encrypted registered
+[    5.413999] ubnt-hdd-pwrctl soc:hdd_pwrctl2: pwren 464, present 468, fault-led 476, pwren delay 500
+[    5.423046] ubnt-hdd-pwrctl soc:hdd_pwrctl2: Failed to request gpio 468 pin: -517
+[    5.430676] input: gpio_keys as /devices/platform/gpio_keys/input/input0
+[    5.437481] ubnt-hdd-pwrctl soc:hdd_pwrctl2: pwren 464, present 468, fault-led 476, pwren delay 500
+[    5.446520] rtc-s35390a 1-0030: setting system clock to 2020-12-23 03:00:27 UTC (1608692427)
+[    5.446526] ubnt-hdd-pwrctl soc:hdd_pwrctl2: Failed to request gpio 468 pin: -517
+[    5.464302] Freeing unused kernel memory: 6816K (ffffffc000a2e000 - ffffffc0010d6000)
+[    5.472136] Freeing alternatives memory: 20K (ffffffc0010d6000 - ffffffc0010db000)
+Loading, please wait...
+Starting version 241
+[    5.562377] al_eth 0000:00:01.0 enp0s1: renamed from eth0
+[    5.621711] al_eth 0000:00:02.0 enp0s2: renamed from eth1
+Begin: Loading essential drivers[    5.684897] al_tdm_test: module license 'unspecified' taints kernel.
+[    5.691825] Disabling lock debugging due to kernel taint
+ ... [    5.800536] loop: module loaded
+[    5.808848] mpt2sas version 20.100.00.00 loaded
+[    5.815361] pps_core: LinuxPPS API ver. 1 registered
+[    5.820319] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    5.831041] PTP clock support registered
+[    5.838373] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+done.
+Begin: Running /scripts/init-premount ... done.
+Begin: Mounting root file system ... 
+Ubiquiti Networks UniFi NVR initializa[    5.873214] configured MAC to RGMII mode:
+tion..
+[    5.878621] al_eth 0000:00:01.0 enp0s1: using MSI-X per Queue interrupt mode
+Begin: Waiting device /dev/mtdbl[    5.887816] libphy: al mdio bus: probed
+ock11 ... done.
+[    5.887878] ubnt-hdd-pwrctl soc:hdd_pwrctl2: pwren 464, present 468, fault-led 476, pwren delay 500
+
+Begin: Waiting [    5.887883] ubnt-hdd-pwrctl soc:hdd_pwrctl2: Failed to request gpio 468 pin: -517
+device /dev/mtd2 ... done.
+Begin: Waiting device /dev/mtd3 ... done.
+Begin: Waiting device /dev/sdq ... 20 ...
+[    5.991754] al_eth 0000:00:01.0 enp0s1: phy[4]: device 8:04, driver Atheros 8031 ethernet
+[    5.999920] al_eth 0000:00:01.0 enp0s1: phy[4]:supported 2ef adv 2ef
+[    6.006335] IPv6: ADDRCONF(NETDEV_UP): enp0s1: link is not ready
+[    6.013044] IPv6: ADDRCONF(NETDEV_UP): enp0s2: link is not ready
+[    6.715381] scsi 8:0:0:0: Direct-Access              UF3 8GB          PMAP PQ: 0 ANSI: 6
+[    6.723711] ubnt-hdd-pwrctl soc:hdd_pwrctl2: pwren 464, present 468, fault-led 476, pwren delay 500
+[    6.732758] ubnt-hdd-pwrctl soc:hdd_pwrctl2: Failed to request gpio 468 pin: -517
+[    6.740592] sd 8:0:0:0: [sdq] 15482880 512-byte logical blocks: (7.93 GB/7.38 GiB)
+[    6.748974] sd 8:0:0:0: [sdq] Write Protect is off
+[    6.754572] sd 8:0:0:0: [sdq] No Caching mode page found
+[    6.759875] sd 8:0:0:0: [sdq] Assuming drive cache: write through
+[    6.771140] sd 8:0:0:0: [sdq] Attached SCSI removable disk
+done.
+Checking USB device exists ... 
+[    6.963516] random: nonblocking pool is initialized
+[    7.296622] EXT4-fs (mtdblock11): mounted filesystem with ordered data mode. Opts: (null)
+Begin: Recovering userdev ...  ... done.
+Begin: Mounting /dev/sdq to /mnt/.rwfs ... [    9.153453] EXT4-fs (sdq): mounted filesystem with ordered data mode. Opts: (null)
+done.
+Begin: Mounting /dev/mtd3 to /mnt/.boot ... [    9.991321] eth [al_eth_0]: set link speed to 1000Mbps. full duplex.
+[    9.997672] al_eth 0000:00:01.0 enp0s1: Link is Up - 1Gbps/Full - flow control off
+[   10.005242] IPv6: ADDRCONF(NETDEV_CHANGE): enp0s1: link becomes ready
+ECC: 1 corrected bitflip(s) at offset 0x011b4000
+ECC: 1 corrected bitflip(s) at offset 0x017ba000
+ECC: 1 corrected bitflip(s) at offset 0x022e8000
+ECC: 1 corrected bitflip(s) at offset 0x03715000
+ECC: 1 corrected bitflip(s) at offset 0x03ead000
+ECC: 1 corrected bitflip(s) at offset 0x05062000
+ECC: 1 corrected bitflip(s) at offset 0x06365000
+ECC: 1 corrected bitflip(s) at offset 0x070c7000
+ECC: 1 corrected bitflip(s) at offset 0x0818d000
+ECC: 1 corrected bitflip(s) at offset 0x091ca000
+ECC: 1 corrected bitflip(s) at offset 0x09cc6000
+ECC: 1 corrected bitflip(s) at offset 0x0a0b2000
+ECC: 1 corrected bitflip(s) at offset 0x0a588000
+ECC: 1 corrected bitflip(s) at offset 0x0ac9b000
+ECC: 1 corrected bitflip(s) at offset 0x0ae23000
+ECC: 1 corrected bitflip(s) at offset 0x0b306000
+ECC: 1 corrected bitflip(s) at offset 0x0c479000
+ECC: 1 corrected bitflip(s) at offset 0x0c675000
+ECC: 1 corrected bitflip(s) at offset 0x0cf6c000
+ECC: 1 corrected bitflip(s) at offset 0x0d567000
+ECC: 1 corrected bitflip(s) at offset 0x0f0e8000
+ECC: 1 corrected bitflip(s) at offset 0x0f113000
+ECC: 1 corrected bitflip(s) at offset 0x0f371000
+ECC: 1 corrected bitflip(s) at offset 0x0f9aa000
+Begin: Waiting device /dev/loop0 ... done.
+done.
+Begin: Mounting /dev/sdq to /mnt/.rwfs ... [   27.246656] EXT4-fs (sdq): mounted filesystem with ordered data mode. Opts: (null)
+done.
+Begin: Setting up overlay filesystem ... Begin: Purifying /mnt/.rwfs/data ... done.
+done.
+Begin: Moving mountpoints to overlay filesystem ... done.
+Begin: Creating essential directories ... done.
+done.
+Begin: Running /scripts/init-bottom ... done.
+[   27.450350] systemd[1]: Failed to find module 'autofs4'
+[   27.817833] systemd[1]: systemd 241 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN2 +IDN -PCRE2 default-hierarchy=hybrid)
+[   27.839269] systemd[1]: Detected architecture arm64.
+
+Welcome to Debian GNU/Linux 9 (stretch)!
+
+[   27.873715] systemd[1]: Set hostname to <UniFi-NVR>.
+[   27.941126] systemd[1]: File /lib/systemd/system/systemd-journald.service:12 configures an IP firewall (IPAddressDeny=any), but the local system does not support BPF/cgroup based firewalling.
+[   27.958193] systemd[1]: Proceeding WITHOUT firewalling in effect! (This warning is only shown for the first loaded unit using IP firewalling.)
+[   28.020425] systemd[1]: /lib/systemd/system/postgresql@.service:12: PIDFile= references path below legacy directory /var/run/, updating /var/run/postgresql/9.6-protect.pid → /run/postgresql/9.6-protect.pid; please update the unit file accordingly.
+[   28.043182] systemd[1]: /lib/systemd/system/postgresql@.service:12: PIDFile= references path below legacy directory /var/run/, updating /var/run/postgresql/9.6-main.pid → /run/postgresql/9.6-main.pid; please update the unit file accordingly.
+[   28.068473] systemd[1]: /lib/systemd/system/rpc-statd.service:13: PIDFile= references path below legacy directory /var/run/, updating /var/run/rpc.statd.pid → /run/rpc.statd.pid; please update the unit file accordingly.
+[   28.115929] systemd[1]: Listening on Journal Audit Socket.
+[  OK  ] Listening on Journal Audit Socket.
+[   28.141787] systemd[1]: Created slice system-ubnt\x2dcertgen.slice.
+[  OK  ] Created slice system-ubnt\x2dcertgen.slice.
+[   28.171208] systemd[1]: Created slice system-postgresql.slice.
+[  OK  ] Created slice system-postgresql.slice.
+[   28.200933] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[  OK  ] Started Forward Password R…uests to Wall Directory Watch.
+[   28.231132] systemd[1]: Listening on udev Control Socket.
+[  OK  ] Listening on udev Control Socket.
+[   28.260974] systemd[1]: Listening on Journal Socket (/dev/log).
+[  OK  ] Listening on Journal Socket (/dev/log).
+[   28.291229] systemd[1]: Listening on RPCbind Server Activation Socket.
+[  OK  ] Listening on RPCbind Server Activation Socket.
+[   28.321215] systemd[1]: Created slice system-systemd\x2dnetworkd\x2dfallbacker.slice.
+[  OK  ] Created slice system-syste…dnetworkd\x2dfallbacker.slice.
+[   28.350938] systemd[1]: Listening on udev Kernel Socket.
+[  OK  ] Listening on udev Kernel Socket.
+[   28.380924] systemd[1]: Listening on initctl Compatibility Named Pipe.
+[  OK  ] Listening on initctl Compatibility Named Pipe.
+[   28.410871] systemd[1]: Reached target Swap.
+[  OK  ] Reached target Swap.
+[   28.430921] systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+[  OK  ] Started Dispatch Password …ts to Console Directory Watch.
+[   28.460876] systemd[1]: Reached target Local Encrypted Volumes.
+[  OK  ] Reached target Local Encrypted Volumes.
+[   28.490876] systemd[1]: Condition check resulted in Arbitrary Executable File Formats File System Automount Point being skipped.
+[   28.502760] systemd[1]: Listening on Network Service Netlink Socket.
+[  OK  ] Listening on Network Service Netlink Socket.
+[   28.531222] systemd[1]: Created slice system-postgresql\x2dcluster.slice.
+[  OK  ] Created slice system-postgresql\x2dcluster.slice.
+[   28.561209] systemd[1]: Created slice system-serial\x2dgetty.slice.
+[  OK  ] Created slice system-serial\x2dgetty.slice.
+[   28.590875] systemd[1]: Reached target Paths.
+[  OK  ] Reached target Paths.
+[   28.611189] systemd[1]: Created slice system-getty.slice.
+[  OK  ] Created slice system-getty.slice.
+[   28.640991] systemd[1]: Listening on Journal Socket.
+[  OK  ] Listening on Journal Socket.
+[   28.661797] systemd[1]: Mounting RPC Pipe File System...
+         Mounting RPC Pipe File System...
+[   28.683498] systemd[1]: Starting Load Kernel Modules...
+         Starting Load Kernel Modules...
+[   28.712167] systemd[1]: Starting Wait for disks...
+         Starting Wait for disks...
+[   28.731091] systemd[1]: Condition check resulted in Kernel Module supporting RPCSEC_GSS being skipped.
+[   28.743501] systemd[1]: Starting udev Coldplug all Devices...
+         Starting udev Coldplug all Devices...
+[   28.773112] systemd[1]: Mounting Temporary Directory (/tmp)...
+         Mounting Temporary Directory (/tmp)...
+[   28.787770] ubnthal: Ubiquiti UniFi-NVR-4
+[   28.802169] systemd[1]: Mounting Huge Pages File System...
+         Mounting Huge Pages File System...
+[   28.832052] systemd[1]: Mounting Kernel Debug File System...
+         Mounting Kernel Debug File System...
+[   28.861976] systemd[1]: Starting Remount Root and Kernel File Systems...
+         Starting Remount Root and Kernel File Systems...
+[   28.892102] systemd[1]: Starting Journal Service...
+         Starting Journal Service...
+[   28.912508] systemd[1]: Starting Create list of required static device nodes for the current kernel...
+         Starting Create list of re…odes for the current kernel...
+[   28.941044] systemd[1]: Condition check resulted in POSIX Message Queue File System being skipped.
+[   28.950418] systemd[1]: Created slice User and Session Slice.
+[  OK  ] Created slice User and Session Slice.
+[   28.980943] systemd[1]: Reached target Slices.
+[  OK  ] Reached target Slices.
+[   29.001709] systemd[1]: Condition check resulted in Set Up Additional Binary Formats being skipped.
+[   29.011876] systemd[1]: Started hardware monitoring daemon.
+[  OK  ] Started hardware monitoring daemon.
+[   29.042689] systemd[1]: Started Journal Service.
+[  OK  ] Started Journal Service.
+[  OK  ] Mounted RPC Pipe File System.
+[  OK  ] Started Load Kernel Modules.
+[  OK  ] Mounted Temporary Directory (/tmp).
+[  OK  ] Mounted Huge Pages File System.
+[  OK  ] Mounted Kernel Debug File System.
+[  OK  ] Started Remount Root and Kernel File Systems.
+[  OK  ] Started Create list of req… nodes for the current kernel.
+[  OK  ] Started udev Coldplug all Devices.
+         Starting Load/Save Random Seed...
+         Starting Create System Users...
+         Mounting Kernel Configuration File System...
+         Starting Apply Kernel Variables...
+         Starting pNFS block layout mapping daemon...
+         Starting Flush Journal to Persistent Storage...
+[  OK  ] Started Load/Save Random Seed.
+[  OK  ] Started Create System Users.
+[  OK  ] Mounted Kernel Configuration File System.
+[  OK  ] Started Apply Kernel Variables.
+[  OK  ] Started pNFS block layout mapping daemon.
+[   29.454241] systemd-journald[451]: Received request to flush runtime journal from PID 1
+         Starting Create Static Device Nodes in /dev...
+[  OK  ] Started Create Static Device Nodes in /dev.
+         Starting udev Kernel Device Manager...
+[  OK  ] Started udev Kernel Device Manager.
+[  OK  ] Found device /dev/ttyS0.
+[  OK  ] Started Flush Journal to Persistent Storage.
+[  OK  ] Started Wait for disks.
+[  OK  ] Reached target Local File Systems (Pre).
+         Starting API server to manipulate storage...
+[  OK  ] Started API server to manipulate storage.
+[  OK  ] Reached target Local File Systems.
+         Starting Regen etc/exports...
+         Starting Invoke bootup-top hooks...
+[   32.596689] EXT4-fs (mtdblock11): mounted filesystem with ordered data mode. Opts: (null)
+         Starting Create Volatile Files and Directories...
+         Starting Generate srv link to volume if possible...
+         Starting Preprocess NFS configuration...
+[  OK  ] Started Create Volatile Files and Directories.
+[  OK  ] Started Regen etc/exports.
+[  OK  ] Started Preprocess NFS configuration.
+[  OK  ] Reached target NFS client services.
+         Starting RPC bind portmap service...
+[  OK  ] Reached target System Time Synchronized.
+         Starting Update UTMP about System Boot/Shutdown...
+[  OK  ] Started RPC bind portmap service.
+[  OK  ] Reached target Remote File Systems (Pre).
+[  OK  ] Reached target Remote File Systems.
+[  OK  ] Reached target RPC Port Mapper.
+[  OK  ] Started Generate srv link to volume if possible.
+[  OK  ] Started Update UTMP about System Boot/Shutdown.
+[  OK  ] Started Invoke bootup-top hooks.
+[  OK  ] Reached target System Initialization.
+[  OK  ] Listening on D-Bus System Message Bus Socket.
+[  OK  ] Started Daily apt download activities.
+[  OK  ] Started Daily apt upgrade and clean activities.
+[  OK  ] Listening on Avahi mDNS/DNS-SD Stack Activation Socket.
+[  OK  ] Reached target Sockets.
+[  OK  ] Started Daily Cleanup of Temporary Directories.
+[  OK  ] Reached target Timers.
+         Starting Self-signed SSL certificate generator...
+[  OK  ] Started Self-signed SSL certificate generator.
+[  OK  ] Reached target Basic System.
+         Starting Resets System Activity Data Collector...
+[  OK  ] Started D-Bus System Message Bus.
+[  OK  ] Started Ubiquiti RPS service.
+         Starting OpenSSH Server host key generation...
+         Starting Initialize hardware monitoring sensors...
+         Starting systemd-resolved prestarter...
+         Starting Check controller version...
+         Starting Self-signed SSL certificate generator...
+         Starting System Logger Daemon...
+[  OK  ] Started Regular background program processing daemon.
+         Starting Avahi mDNS/DNS-SD Stack...
+         Starting systemd-networkd dhcpc fallback service...
+         Starting PostgreSQL initial setup service...
+         Starting systemd-networkd dhcpc fallback service...
+         Starting Login Service...
+[  OK  ] Started Ubiquiti control service.
+[  OK  ] Started System Logger Daemon.
+[  OK  ] Started Resets System Activity Data Collector.
+[  OK  ] Started OpenSSH Server host key generation.
+[  OK  ] Started systemd-resolved prestarter.
+[  OK  ] Started Check controller version.
+[  OK  ] Started Self-signed SSL certificate generator.
+[  OK  ] Started Initialize hardware monitoring sensors.
+[  OK  ] Started systemd-networkd dhcpc fallback service.
+[  OK  ] Started systemd-networkd dhcpc fallback service.
+         Starting Network Service...
+[  OK  ] Started Avahi mDNS/DNS-SD Stack.
+[  OK  ] Started Login Service.
+[  OK  ] Started Network Service.
+         Starting Network Name Resolution...
+[  OK  ] Started PostgreSQL initial setup service.
+         Starting PostgreSQL Cluster 9.6-main...
+[  OK  ] Started Network Name Resolution.
+[  OK  ] Reached target Network.
+[  OK  ] Started Unattended Upgrades Shutdown.
+[  OK  ] Started API server to manipulate NAS operations.
+         Starting OpenBSD Secure Shell server...
+         Starting Permit User Sessions...
+[  OK  ] Reached target Network is Online.
+         Starting LSB: Start NTP daemon...
+[  OK  ] Reached target Host and Network Name Lookups.
+         Starting A high performanc… and a reverse proxy server...
+[  OK  ] Started Permit User Sessions.
+[  OK  ] Started OpenBSD Secure Shell server.
+[  OK  ] Started Serial Getty on ttyS0.
+[  OK  ] Started Getty on tty1.
+[  OK  ] Reached target Login Prompts.
+[  OK  ] Started A high performance…er and a reverse proxy server.
+[  OK  ] Started LSB: Start NTP daemon.
+[  OK  ] Started PostgreSQL Cluster 9.6-main.
+         Starting PostgreSQL RDBMS...
+         Starting UniFi Protect Setup service...
+         Starting UniFi ULP-GO Backend service...
+[  OK  ] Started PostgreSQL RDBMS.
+[  OK  ] Started UniFi Protect Setup service.
+[  OK  ] Started UniFi ULP-GO Backend service.
+         Starting UniFi Core...
+
+Debian GNU/Linux 9 UniFi-NVR ttyS0
+
+UniFi-NVR login: root (automatic login)
+
+Last login: Tue Dec 22 17:30:21 PST 2020 on ttyS0
+Linux UniFi-NVR 4.1.37-ubnt #4 SMP Sat Mar 7 05:22:19 CST 2020 aarch64
+
+Firmware version: v1.3.1
+
+  ___ ___      .__________.__
+ |   |   |____ |__\_  ____/__|
+ |   |   /    \|  ||  __) |  |   (c) 2010-2020
+ |   |  |   |  \  ||  \   |  |   Ubiquiti Inc.
+ |______|___|  /__||__/   |__|
+            |_/                  https://www.ui.com
+
+      Welcome to UniFi NVR!
+
+root@UniFi-NVR:~# [   43.175967] EXT4-fs (mtdblock11): mounted filesystem with ordered data mode. Opts: (null)
+
+root@UniFi-NVR:~# uptime
+ 19:01:13 up 0 min,  1 user,  load average: 0.76, 0.22, 0.07
+root@UniFi-NVR:~# 

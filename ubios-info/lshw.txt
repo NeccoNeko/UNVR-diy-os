@@ -1,0 +1,191 @@
+unifi-nvr
+    description: Computer
+    product: Annapurna Labs Alpine V2 UBNT
+    width: 64 bits
+    capabilities: smp
+  *-core
+       description: Motherboard
+       physical id: 0
+     *-cpu:0
+          description: CPU
+          product: cache
+          physical id: 3
+          bus info: cpu@0
+          capabilities: fp asimd evtstrm aes pmull sha1 sha2 crc32
+     *-cpu:1
+          description: CPU
+          product: cpu
+          physical id: 6
+          bus info: cpu@1
+          capabilities: fp asimd evtstrm aes pmull sha1 sha2 crc32
+     *-cpu:2
+          description: CPU
+          product: cpu
+          physical id: 7
+          bus info: cpu@2
+          capabilities: fp asimd evtstrm aes pmull sha1 sha2 crc32
+     *-cpu:3
+          description: CPU
+          product: cpu
+          physical id: a
+          bus info: cpu@3
+          capabilities: fp asimd evtstrm aes pmull sha1 sha2 crc32
+     *-cpu:4 DISABLED
+          description: CPU
+          product: cpu
+          physical id: b
+          bus info: cpu@4
+     *-cpu:5 DISABLED
+          description: CPU
+          product: idle-states
+          physical id: c
+          bus info: cpu@5
+     *-memory
+          description: System memory
+          physical id: d
+          size: 3885MiB
+     *-network:0
+          description: Ethernet interface
+          physical id: 1
+          bus info: pci@0000:00:01.0
+          logical name: enp0s1
+          version: 02
+          serial: f4:92:bf:86:27:2c
+          size: 1Gbit/s
+          capacity: 1Gbit/s
+          width: 64 bits
+          clock: 33MHz
+          capabilities: pciexpress pm msix bus_master cap_list ethernet physical tp mii 10bt 10bt-fd 100bt 100bt-fd 1000bt-fd autonegotiation
+          configuration: autonegotiation=on broadcast=yes driver=al_eth driverversion=0.2 duplex=full ip=10.1.2.121 latency=0 link=yes multicast=yes port=MII speed=1Gbit/s
+          resources: irq:0 memory:fe000000-fe01ffff memory:fe15c000-fe15cfff memory:fe150000-fe153fff
+     *-network:1
+          description: Ethernet interface
+          physical id: 2
+          bus info: pci@0000:00:02.0
+          logical name: enp0s2
+          version: 03
+          serial: f6:92:bf:86:27:2c
+          size: 1Gbit/s
+          width: 64 bits
+          clock: 33MHz
+          capabilities: pciexpress pm msix bus_master cap_list ethernet physical
+          configuration: autonegotiation=on broadcast=yes driver=al_eth driverversion=0.2 duplex=full latency=0 link=no multicast=yes port=twisted pair speed=1Gbit/s
+          resources: irq:0 memory:fe020000-fe03ffff memory:fe15d000-fe15dfff memory:fe120000-fe12ffff memory:fe040000-fe09ffff
+     *-generic:0
+          description: Network and computing encryption device
+          physical id: 4
+          bus info: pci@0000:00:04.0
+          version: 02
+          width: 64 bits
+          clock: 33MHz
+          capabilities: pciexpress pm msix bus_master cap_list
+          configuration: driver=al_crypto latency=0
+          resources: irq:0 memory:fe0a0000-fe0bffff memory:fe130000-fe13ffff memory:fe0c0000-fe0dffff
+     *-generic:1
+          description: Network and computing encryption device
+          product: Illegal Vendor ID
+          vendor: Illegal Vendor ID
+          physical id: 4.1
+          bus info: pci@0000:00:04.1
+          version: 02
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pciexpress msix bus_master cap_list
+          configuration: driver=al_crypto latency=0
+          resources: irq:0 memory:fe0c0000-fe0dffff
+     *-storage:0
+          description: RAID bus controller
+          physical id: 5
+          bus info: pci@0000:00:05.0
+          version: 02
+          width: 64 bits
+          clock: 33MHz
+          capabilities: storage pciexpress pm msix bus_master cap_list
+          configuration: driver=al_dma latency=0
+          resources: irq:0 memory:fe0e0000-fe0fffff memory:fe140000-fe14ffff memory:fe100000-fe11ffff
+     *-storage:1
+          description: RAID bus controller
+          product: Illegal Vendor ID
+          vendor: Illegal Vendor ID
+          physical id: 5.1
+          bus info: pci@0000:00:05.1
+          version: 02
+          width: 32 bits
+          clock: 33MHz
+          capabilities: storage pciexpress msix bus_master cap_list
+          configuration: driver=al_dma latency=0
+          resources: irq:0 memory:fe100000-fe11ffff
+     *-storage:2
+          description: SATA controller
+          physical id: 8
+          bus info: pci@0000:00:08.0
+          version: 02
+          width: 32 bits
+          clock: 33MHz
+          capabilities: storage pciexpress pm msix ahci_1.0 bus_master cap_list
+          configuration: driver=ahci latency=0
+          resources: irq:206 memory:fe154000-fe157fff
+     *-storage:3
+          description: SATA controller
+          physical id: 9
+          bus info: pci@0000:00:09.0
+          version: 02
+          width: 32 bits
+          clock: 33MHz
+          capabilities: storage pciexpress pm msix ahci_1.0 bus_master cap_list
+          configuration: driver=ahci latency=0
+          resources: irq:207 memory:fe158000-fe15bfff
+     *-pci
+          description: PCI bridge
+          physical id: 0
+          bus info: pci@0001:00:00.0
+          version: 01
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pci pm msi pciexpress msix vpd normal_decode bus_master cap_list
+          resources: memory:c0100000-c01fffff memory:c0010000-c001ffff memory:c0020000-c002ffff memory:c0200000-c02fffff
+        *-usb
+             description: USB controller
+             product: ASM1042A USB 3.0 Host Controller
+             vendor: ASMedia Technology Inc.
+             physical id: 0
+             bus info: pci@0001:01:00.0
+             version: 00
+             width: 64 bits
+             clock: 33MHz
+             capabilities: msi msix pm pciexpress xhci bus_master cap_list
+             configuration: driver=xhci_hcd latency=0
+             resources: irq:208 memory:c0200000-c0207fff
+           *-usbhost:0
+                product: xHCI Host Controller
+                vendor: Linux 4.1.37-ubnt xhci-hcd
+                physical id: 0
+                bus info: usb@2
+                logical name: usb2
+                version: 4.01
+                capabilities: usb-3.00
+                configuration: driver=hub slots=2 speed=5000Mbit/s
+              *-usb
+                   description: Mass storage device
+                   product: UF3 8GB
+                   physical id: 1
+                   bus info: usb@2:1
+                   version: 1.00
+                   serial: 070A034B9366C713
+                   capabilities: usb-3.10 scsi
+                   configuration: driver=usb-storage maxpower=504mA speed=5000Mbit/s
+           *-usbhost:1
+                product: xHCI Host Controller
+                vendor: Linux 4.1.37-ubnt xhci-hcd
+                physical id: 1
+                bus info: usb@1
+                logical name: usb1
+                version: 4.01
+                capabilities: usb-2.00
+                configuration: driver=hub slots=2 speed=480Mbit/s
+  *-scsi
+       physical id: 1
+       bus info: scsi@8
+       logical name: scsi8
+       capabilities: scsi-host
+       configuration: driver=usb-storage

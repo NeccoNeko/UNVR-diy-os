@@ -1,0 +1,634 @@
+stage2_loader v2.22
+SPD I2C Address: 57
+Executing next!
+
+-----------------------------------------------------
+Stage 3 version: 2.22.0
+Commit ID: 6088bc3
+CVOS commit ID: bac1d521
+HAL commit ID: c72baea8
+Build date: Aug 23 2017 14:59:30
+-----------------------------------------------------
+
+agent_wakeup v2.10
+EEPROM Revision ID = 39
+Device ID = a324
+Device Info: v2sil-39-rc1
+Loading DT to 01100000 (25864 bytes)...
+Board config ID: alpine_v2_ubnt one nas v4.0
+Loading application to 01100000 (636808 bytes)...
+Executing application...
+
+
+U-Boot 2015.07-alpine_db-2.21-HAL (Dec 11 2019 - 03:05:06 +0800)
+
+I2C:   ready
+DRAM:  4 GiB
+Trace early: 0000000000ff0000, 10000
+
+   _
+  /_\  _ __  _ __   __ _ _ __  _   _ _ __ _ __   __ _
+ //_\\| '_ \| '_ \ / _` | '_ \| | | | '__| '_ \ / _` |
+/  _  \ | | | | | | (_| | |_) | |_| | |  | | | | (_| |
+\_/ \_/_| |_|_| |_|\__,_| .__/ \__,_|_|  |_| |_|\__,_|
+   __       _           |_|
+  / /  __ _| |__  ___
+ / /  / _` | '_ \/ __|
+/ /__| (_| | |_) \__ \
+\____/\__,_|_.__/|___/
+               ___             _
+ /\ /\        / __\ ___   ___ | |_
+/ / \ \_____ /__\/// _ \ / _ \| __|
+\ \_/ /_____/ \/  \ (_) | (_) | |_
+ \___/      \_____/\___/ \___/ \__|
+
+temprature: 41 degrees
+eeprom_per_device_init: no valid information found!
+power_init_board: EEPROM per device information is not valid - using defaults!
+SF: Detected MX25U25635F with page size 256 Bytes, erase size 4 KiB, total 32 MiB
+U-Boot script not found in TOC!
+Board config ID: alpine_v2_ubnt one nas v4.0
+Trace disabled
+NAND:  1024 MiB
+SF: Detected MX25U25635F with page size 256 Bytes, erase size 4 KiB, total 32 MiB
+PCI:
+  00:01.0     - 1c36:0001 - Network controller
+  00:02.0     - 1c36:0002 - Network controller
+  00:04.0     - 1c36:0022 - Cryptographic device
+  00:05.0     - 1c36:0022 - Mass storage controller
+  00:08.0     - 1c36:0031 - Mass storage controller
+  00:09.0     - 1c36:0031 - Mass storage controller
+PCIE_0: Link up. Speed 5GT/s Width x1
+PCI:
+  01:00.0     - 1b21:1142 - Serial bus controller
+In:    serial
+Out:   serial
+Err:   serial
+dtt_get_temp[0] 94
+dtt_get_temp[1] 95
+dtt_get_temp[2] 89
+Net:   , al_eth1 [PRIME], al_eth2
+gpio: pin 37 (gpio 37) value is 0
+Setting bus to 4
+SF: Detected MX25U25635F with page size 256 Bytes, erase size 4 KiB, total 32 MiB
+device 0 offset 0x1f0000, size 0x12
+SF: 18 bytes @ 0x1f0000 Read: OK
+Saving Environment to SPI Flash...
+SF: Detected MX25U25635F with page size 256 Bytes, erase size 4 KiB, total 32 MiB
+Erasing SPI flash...Writing to SPI flash...done
+Valid environment: 2
+Autobooting in 2 seconds, press "<Esc><Esc>" to stop
+ALPINE_UBNT_NAS> 
+
+############################################
+
+ALPINE_UBNT_NAS> help
+?       - alias for 'help'
+al_pcie_ext- Enable AL PCIe external
+base    - print or set address offset
+bdinfo  - print Board Info structure
+boot    - boot default, i.e., run 'bootcmd'
+bootd   - boot default, i.e., run 'bootcmd'
+bootm   - boot application image from memory
+bootmenu- ANSI terminal bootmenu
+bootp   - boot image via network using BOOTP/TFTP protocol
+bootz   - boot Linux zImage image from memory
+cmp     - memory compare
+confirm_msg- get user input and updates "?" varialbe to 0 if 'y' was entered
+coninfo - print console devices and information
+cp      - memory copy
+cpu_aborts_enable_set- Set enabling state of CPU aborts
+cpu_set_speed- Set CPU speed
+crc32   - checksum calculation
+ddr_ecc_poison- DDR ECC poisoning
+ddr_ecc_stats- DDR ECC statistics
+ddr_training_results- DDR training results
+dev_info- Show the device configuration values
+dhcp    - boot image via network using DHCP/TFTP protocol
+dhcprelease- release IP address previously leased by DHCP server
+dram_margins- The command provides current DRAM RDQS/WDQS margins by running a shmoo based on the DDR controller BIST feature
+dtt     - Read temperature from Digital Thermometer and Thermostat
+echo    - echo args to console
+editenv - edit environment variable
+eeprom_per_device- EEPROM per device operations
+env     - environment handling commands
+erase   - erase FLASH memory
+eth_1g_params_set- configure 1G link parameters.these parameters will also be applied in Linux
+
+eth_freeze_serdes_settings- freeze serdes parameters to be used in the upper layer (disable by default)
+* enabling it will cause the upper layer to avoid replacing these parameters
+* enabled mode should be used in case the serdes parameter were set in the u-boot
+
+eth_link_training_enable- enable / disable link training
+
+eth_lm_debug_enable- enable / disable link management debug enable
+
+eth_mac_mode_set- override the mac mode from the device tree
+
+eth_retimer_config- override retimer configuration
+
+exit    - exit script
+ext4load- load binary file from a Ext4 filesystem
+ext4ls  - list files in a directory (default /)
+ext4size- determine a file's size
+false   - do nothing, unsuccessfully
+fdt     - flattened device tree utility commands
+flash_contents_boot_mode_default_app_set- Set default application loaded by the pre-boot code
+flash_contents_boot_mode_default_app_show- Show default application loaded by the pre-boot code
+flash_contents_instance_invalidate- Invalidate a boot instance
+flash_contents_instance_revalidate- Revalidate a boot instance
+flash_contents_obj_info_print- Print a specific flash object information
+flash_contents_obj_read- Read a specific flash object
+flash_contents_obj_read_mem- Read a specific flash object from memory
+flash_contents_obj_update- Update a specific flash object
+flash_contents_obj_validate- Validate a specific flash object
+flash_contents_set_dev- Set flash contents current device
+flash_contents_toc_print- Print the flash contents TOC
+flinfo  - print FLASH memory information
+go      - start application at address 'addr'
+gpio    - query and control gpio pins
+gpt     - GUID Partition Table
+grepenv - search environment variables
+help    - print command description/usage
+i2c     - I2C sub-system
+iminfo  - print header information for application image
+imxtract- extract a part of a multi-image
+incenv  - increment environment variable
+iodma_init- Initialize the RAID and memory services accelerator
+iodma_memcpy- Memory copy using the RAID and memory services accelerator
+iodma_memset- Memory set using the RAID and memory services accelerator
+iodma_terminate- Terminates the RAID and memory services accelerator
+is_nand_boot- Returns 1 if boot device is NAND
+itest   - return true/false on integer compare
+lcd_print- Clears LCD display
+loadb   - load binary file over serial line (kermit mode)
+loads   - load S-Record file over serial line
+loadx   - load binary file over serial line (xmodem mode)
+loady   - load binary file over serial line (ymodem mode)
+loop    - infinite loop on address range
+md      - memory display
+md5sum  - compute MD5 message digest
+mdio    - MDIO utility commands
+mem_pattern_set- set values alternately according to the even and odd values
+mii     - MII utility commands
+mm      - memory modify (auto-incrementing address)
+mtest   - simple RAM read/write test
+muio_mux- Multi usage I/O pins (MUIO) multiplexing control - debug
+mw      - memory write (fill)
+nand    - NAND sub-system
+nboot   - boot from NAND device
+nfs     - boot image via network using NFS protocol
+nm      - memory modify (constant address)
+part    - disk partition related commands
+pca953x - pca953x gpio access
+pci     - list and access PCI Configuration Space
+ping    - send ICMP ECHO_REQUEST to network host
+printenv- print environment variables
+protect - enable or disable FLASH write protection
+pxe     - commands to get and boot from pxe files
+reset   - Perform RESET of the CPU
+run     - run commands in an environment variable
+saveenv - save environment variables to persistent storage
+scripth - Show help menu for available scripts
+scsi    - SCSI sub-system
+scsi_get_disk_count- Returns connected disk count
+scsiboot- boot from SCSI device
+serdes  - Serdes debug
+setenv  - set environment variables
+setenvmem- set environment variable from memory
+setexpr - set environment variable as the result of eval expression
+setmacmem- set mac according to data in eeprom
+sf      - SPI flash sub-system
+sgpo    - control SGPO pins
+showvar - print local hushshell variables
+sleep   - delay execution for some time
+source  - run script from memory
+sysboot - command to get and boot from syslinux files
+test    - minimal test like /bin/sh
+tftpboot- boot image via network using TFTP protocol
+tftpput - TFTP put command, for uploading files to a server
+thermal_get- Thermal sensor get readout
+thermal_init- Initialize the thermal sensor
+trace_dump- Trace dump
+true    - do nothing, successfully
+version - print monitor, compiler and linker version
+wfi     - CPU wait for interrupt CPU idle)
+
+############################################
+
+ALPINE_UBNT_NAS> base
+Base Address: 0x00000000
+
+############################################
+
+ALPINE_UBNT_NAS> bdinfo
+arch_number = 0x00000000
+boot_params = 0x00000100
+DRAM bank   = 0x00000000
+-> start    = 0x00000000
+-> size     = 0x40000000
+DRAM bank   = 0x00000001
+-> start    = 0x40000000
+-> size     = 0x40000000
+DRAM bank   = 0x00000002
+-> start    = 0x80000000
+-> size     = 0x40000000
+DRAM bank   = 0x00000003
+-> start    = 0x200000000
+-> size     = 0x40000000
+current eth = al_eth1
+ip_addr     = <NULL>
+baudrate    = 115200 bps
+TLB addr    = 0x03FF0000
+relocaddr   = 0x03F3B000
+reloc off   = 0x02E3B000
+irq_sp      = 0x03B35CD0
+sp start    = 0x03B35CD0
+
+############################################
+
+ALPINE_UBNT_NAS> coninfo
+List of available devices:
+serial   80000003 SIO stdin stdout stderr 
+eserial1 00000003 .IO 
+eserial0 00000003 .IO 
+
+############################################
+
+ALPINE_UBNT_NAS> ddr_ecc_stats
+DDR ECC is disabled
+
+############################################
+
+ALPINE_UBNT_NAS> ddr_training_results
+ ___________________________________________________________________________________________________________
+|     | #Taps DLL | ---W R I T E  L E V E L I N G---               | ---R E A D   D Q S   D E L A Y---      |
+|OCTET| init  now |   r3          r2          r1         r0        |  r3        r2        r1       r0       |
+|-----+-----------+------------------------------------------------+----------------------------------------|
+| #0: |   70   70 |   0           0           0          58        |  0+0/2CK   0+0/2CK   0+0/2CK  43+4/2CK |
+|#0x4:|   70   70 |   0           0           0           0        |  0+0/2CK   0+0/2CK   0+0/2CK  46+4/2CK |
+| #1: |   70   71 |   0           0           0          63        |  0+0/2CK   0+0/2CK   0+0/2CK  48+4/2CK |
+|#1x4:|   70   71 |   0           0           0           0        |  0+0/2CK   0+0/2CK   0+0/2CK  52+4/2CK |
+| #2: |   68   70 |   0           0           0           7+1/2CK  |  0+0/2CK   0+0/2CK   0+0/2CK   6+5/2CK |
+|#2x4:|   68   70 |   0           0           0           0        |  0+0/2CK   0+0/2CK   0+0/2CK   6+5/2CK |
+| #3: |   67   69 |   0           0           0           7+1/2CK  |  0+0/2CK   0+0/2CK   0+0/2CK  10+5/2CK |
+|#3x4:|   67   69 |   0           0           0           0        |  0+0/2CK   0+0/2CK   0+0/2CK  10+5/2CK |
+| #4: |   69   70 |   0           0           0           3+1/2CK  |  0+0/2CK   0+0/2CK   0+0/2CK  25+5/2CK |
+|#4x4:|   69   70 |   0           0           0           0        |  0+0/2CK   0+0/2CK   0+0/2CK  25+5/2CK |
+| #5: |   67   69 |   0           0           0          63        |  0+0/2CK   0+0/2CK   0+0/2CK  19+5/2CK |
+|#5x4:|   67   69 |   0           0           0           0        |  0+0/2CK   0+0/2CK   0+0/2CK  19+5/2CK |
+| #6: |   66   68 |   0           0           0          63        |  0+0/2CK   0+0/2CK   0+0/2CK  40+5/2CK |
+|#6x4:|   66   68 |   0           0           0           0        |  0+0/2CK   0+0/2CK   0+0/2CK  40+5/2CK |
+| #7: |   69   70 |   0           0           0          40        |  0+0/2CK   0+0/2CK   0+0/2CK  27+5/2CK |
+|#7x4:|   69   70 |   0           0           0           0        |  0+0/2CK   0+0/2CK   0+0/2CK  27+5/2CK |
+|_____|___________|________________________________________________|________________________________________|
+ _______________________________________________________________________________________________________________________________________
+| OCTET | WDQD            | RDQSD           | RDQSND           | DQSGSD | WLMN | WBMN | WLMX | WBMX | RLMN | RBMN | RLMX | RBMX | RDDLY |
+|       |  r0  r1  r2  r3 |  r0  r1  r2  r3 |  r0  r1  r2  r3  |                                                                        |
+|-------+-----------------+-----------------+------------------+--------+------+------+------+------+------+------+------+------+-------|
+| #0:   |  33  35  35  35 |  33   2   2   2 |  33   2   2   2  |   8    |   2  |   0  |  64  |   0  |   3  |   0  |  64  |   0  |   4   |
+| #0x4: |  32  34  34  34 |  33   2   2   2 |  33   2   2   2  |   8    |   0  |   0  |   0  |   0  |   0  |   0  |   0  |   0  |   4   |
+| #1:   |  33  33  33  33 |  33   1   1   1 |  32   0   0   0  |   8    |   3  |   0  |  64  |   0  |   1  |   0  |  65  |   0  |   4   |
+| #1x4: |  34  34  34  34 |  35   3   3   3 |  35   3   3   3  |   9    |   0  |   0  |   0  |   0  |   0  |   0  |   0  |   0  |   4   |
+| #2:   |  32  35  35  35 |  33   0   0   0 |  32   0   0   0  |   8    |   0  |   0  |  64  |   0  |   1  |   0  |  65  |   0  |   4   |
+| #2x4: |  31  33  33  33 |  33   0   0   0 |  32   0   0   0  |   8    |   0  |   0  |   0  |   0  |   0  |   0  |   0  |   0  |   4   |
+| #3:   |  34  33  33  33 |  32   0   0   0 |  32   0   0   0  |   8    |   4  |   0  |  65  |   0  |   0  |   0  |  65  |   0  |   4   |
+| #3x4: |  34  33  33  33 |  32   0   0   0 |  31 255 255 255  |   8    |   0  |   0  |   0  |   0  |   0  |   0  |   0  |   0  |   4   |
+| #4:   |  34  33  33  33 |  33   1   1   1 |  33   1   1   1  |   8    |   4  |   0  |  64  |   0  |   2  |   0  |  64  |   0  |   4   |
+| #4x4: |  35  34  34  34 |  34   2   2   2 |  33   1   1   1  |   9    |   0  |   0  |   0  |   0  |   0  |   0  |   0  |   0  |   4   |
+| #5:   |  37  36  36  36 |  35   2   2   2 |  33   4   4   4  |   8    |   4  |   0  |  68  |   0  |   3  |   0  |  66  |   0  |   4   |
+| #5x4: |  36  35  35  35 |  37   4   4   4 |  30   1   1   1  |   8    |   0  |   0  |   0  |   0  |   0  |   0  |   0  |   0  |   4   |
+| #6:   |  34  35  35  35 |  38   6   6   6 |  36   6   6   6  |   8    |   2  |   0  |  64  |   0  |   9  |   0  |  66  |   0  |   4   |
+| #6x4: |  31  32  32  32 |  39   7   7   7 |  35   5   5   5  |   8    |   0  |   0  |   0  |   0  |   0  |   0  |   0  |   0  |   4   |
+| #7:   |  37  33  33  33 |  32   0   0   0 |  32   0   0   0  |   8    |   6  |   0  |  68  |   1  |   1  |   0  |  63  |   0  |   4   |
+| #7x4: |  37  33  33  33 |  31 255 255 255 |  31 255 255 255  |   8    |   0  |   0  |   0  |   0  |   0  |   0  |   0  |   0  |   4   |
+|_______|_________________|_________________|__________________|________|______|______|______|______|______|______|______|______|_______|
+ ________________________________________________________________________________________
+| OCTET | DQWBD0 | DQWBD1 | DQWBD2 | DQWBD3 | DQWBD4 | DQWBD5 | DQWBD6 | DQWBD7 | DMWBD  |
+|-------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
+| #0:   |   2    |   0    |   1    |   0    |   1    |   1    |   3    |   5    |  63    |
+| #1:   |   4    |   0    |   2    |   2    |   5    |   0    |   3    |   2    |  63    |
+| #2:   |   5    |   2    |   5    |   0    |   2    |   5    |   4    |   4    |  63    |
+| #3:   |   4    |   5    |   8    |   0    |   8    |   4    |   4    |   3    |  63    |
+| #4:   |   4    |   3    |   2    |   1    |   1    |   1    |   2    |   4    |  63    |
+| #5:   |   1    |   1    |   4    |   6    |   3    |   2    |   5    |   8    |  62    |
+| #6:   |   2    |   2    |   5    |   2    |   0    |   0    |   4    |   2    |  63    |
+| #7:   |   5    |   2    |   5    |   4    |   2    |   1    |   2    |   1    |  60    |
+|_______|________|________|________|________|________|________|________|________|________|
+ ________________________________________________________________________________________
+| OCTET | DQRBD0 | DQRBD1 | DQRBD2 | DQRBD3 | DQRBD4 | DQRBD5 | DQRBD6 | DQRBD7 | DMRBD  |
+|-------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
+| #0:   |   0    |   0    |   5    |   2    |   5    |   4    |   3    |   2    |   0    |
+| #1:   |   4    |   1    |   3    |   3    |   3    |   0    |   1    |   1    |  62    |
+| #2:   |   1    |   2    |   6    |   4    |   0    |   3    |   3    |   0    |   0    |
+| #3:   |   2    |   5    |   9    |   1    |   9    |   4    |   2    |   2    |  62    |
+| #4:   |   6    |   4    |   4    |   3    |   0    |   4    |   2    |   2    |   0    |
+| #5:   |   3    |   2    |   8    |   0    |   5    |   4    |   4    |   9    |   0    |
+| #6:   |   5    |  10    |   6    |   0    |   4    |   5    |   4    |   7    |   0    |
+| #7:   |   6    |   1    |   5    |   2    |   4    |   4    |   2    |   0    |  62    |
+|_______|________|________|________|________|________|________|________|________|________|
+ _________________________________________________________________________________________________________________________________________
+|     | ---  DRAM VREF  --- | ---DRAM VREF MIN--- | ---DRAM VREF MAX--- | ---  HOST VREF  --- | ---HOST VREF MIN--- | ---HOST VREF MAX--- |
+|OCTET| r3   r2   r1   r0   | r3   r2   r1   r0   | r3   r2   r1   r0   | r3   r2   r1   r0   | r3   r2   r1   r0   | r3   r2   r1   r0   |
+|-----+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------|
+| #0: |  9    9    9   25   |  0    0    0    0   | 63   63   63   50   |  0    0    0   31   |  0    0    0    4   | 63   63   63   59   |
+|#0x4:|  9    9    9   25   |  0    0    0    0   | 63   63   63   50   |  0    0    0   32   |  0    0    0    5   | 63   63   63   60   |
+| #1: |  9    9    9   25   |  0    0    0    0   | 63   63   63   50   |  0    0    0   31   |  0    0    0    0   | 63   63   63   63   |
+|#1x4:|  9    9    9   25   |  0    0    0    0   | 63   63   63   50   |  0    0    0   31   |  0    0    0    0   | 63   63   63   62   |
+| #2: |  9    9    9   25   |  0    0    0    0   | 63   63   63   50   |  0    0    0   34   |  0    0    0    7   | 63   63   63   62   |
+|#2x4:|  9    9    9   25   |  0    0    0    0   | 63   63   63   50   |  0    0    0   35   |  0    0    0    8   | 63   63   63   62   |
+| #3: |  9    9    9   25   |  0    0    0    0   | 63   63   63   50   |  0    0    0   34   |  0    0    0    8   | 63   63   63   61   |
+|#3x4:|  9    9    9   25   |  0    0    0    0   | 63   63   63   50   |  0    0    0   34   |  0    0    0    8   | 63   63   63   60   |
+| #4: |  9    9    9   25   |  0    0    0    0   | 63   63   63   50   |  0    0    0   33   |  0    0    0    8   | 63   63   63   59   |
+|#4x4:|  9    9    9   25   |  0    0    0    0   | 63   63   63   50   |  0    0    0   33   |  0    0    0    7   | 63   63   63   60   |
+| #5: |  9    9    9   25   |  0    0    0    0   | 63   63   63   50   |  0    0    0   31   |  0    0    0    5   | 63   63   63   58   |
+|#5x4:|  9    9    9   25   |  0    0    0    0   | 63   63   63   50   |  0    0    0   31   |  0    0    0    4   | 63   63   63   58   |
+| #6: |  9    9    9   25   |  0    0    0    0   | 63   63   63   50   |  0    0    0   31   |  0    0    0    2   | 63   63   63   61   |
+|#6x4:|  9    9    9   25   |  0    0    0    0   | 63   63   63   50   |  0    0    0   31   |  0    0    0    2   | 63   63   63   61   |
+| #7: |  9    9    9   25   |  0    0    0    0   | 63   63   63   50   |  0    0    0   31   |  0    0    0    1   | 63   63   63   62   |
+|#7x4:|  9    9    9   25   |  0    0    0    0   | 63   63   63   50   |  0    0    0   31   |  0    0    0    2   | 63   63   63   61   |
+|_____|_____________________|_____________________|_____________________|_____________________|_____________________|_____________________|
+
+############################################
+
+ALPINE_UBNT_NAS> dev_info
+Reset strap readouts:
+--------------------
+CPU PLL freq:	 1700[MHz]
+NB PLL freq:	 933[MHz]
+SB PLL freq:	 3000[MHz]
+SB clock freq:	 500[MHz]
+PLL ref clock freq:	 100[MHz]
+I2C Preload status:	 I2C preload enabled
+SPIS Preload status:	 SPIS preload disabled
+Boot ROM status:	 Boot ROM enabled
+Boot device:	 SPI Flash, mode 0x0
+Debug mode status:	 Debug mode disabled
+CPU exist status:	 CPU_0 & CPU_1 & CPU_2 & CPU_3 are active
+
+############################################
+
+ALPINE_UBNT_NAS> dtt
+DTT1: 96 C
+
+############################################
+
+ALPINE_UBNT_NAS> eeprom_per_device show
+MAC address 0: ff:ff:ff:ff:ff:ff(dirty)
+MAC address 1: ff:ff:ff:ff:ff:ff(dirty)
+MAC address 2: ff:ff:ff:ff:ff:ff(dirty)
+MAC address 3: ff:ff:ff:ff:ff:ff(dirty)
+
+############################################
+
+ALPINE_UBNT_NAS> env print
+arch=arm
+autoload=n
+board=alpine_ubnt
+board_name=alpine_ubnt
+boot_instance_active=0
+boot_instance_non_active=1
+bootcmd=cp.b $fdtaddr $loadaddr_dt 7ffc; fdt addr $loadaddr_dt; run loadbootargs; run dualboot
+bootdelay=2
+bootnand=lcd_print "Loading OS from nand ...";nand set_partition_offset $nand_pt_addr_kernel;nand read $loadaddr $nand_pt_addr_kernel 4;setenvmem filesize $loadaddr;incenv filesize 4;nand read $loadaddr $nand_pt_addr_kernel $filesize;nand set_partition_offset $nand_pt_addr_al_boot;bootm $loadaddr_payload - $fdtaddr;lcd_print bootnand Failed!
+bootspi=lcd_print "Loading OS from spi...";sf probe;sf read $loadaddr $spi_pt_addr_kernel 4;setenvmem filesize $loadaddr;incenv filesize 4;sf read $loadaddr $spi_pt_addr_kernel $filesize;bootm $loadaddr_payload - $fdtaddr;lcd_print bootspi Failed!
+boottftp=lcd_print "Loading OS...";tftpboot $loadaddr ${tftpdir}${dt_filename};if test $? -ne 0; then run fail; exit; fi;if test ${dt_is_from_toc} != 1; then; else flash_contents_obj_read_mem $loadaddr_dt $loadaddr;if test $? -ne 0; then run fail; exit; fi;fi;tftpboot $loadaddr ${tftpdir}uImage;if test $? -ne 0; then run fail; exit; fi;fdt addr $loadaddr_dt;bootm $loadaddr - $fdtaddr;run fail; exit
+bootupd=is_nand_boot; if test $? -eq 0; then run bootupdspi; else; run bootupdnand; fi
+bootupdnand=lcd_print "Updating al-boot" "to NAND"; tftpboot $loadaddr ${tftpdir}boot.img; if test $? -ne 0; then run fail; exit; fi;nand set_partition_offset $nand_pt_addr_al_boot;nand erase.spread $nand_pt_addr_al_boot $filesize; nand write $loadaddr $nand_pt_addr_al_boot $filesize; lcd_print "Done"
+bootupdspi=lcd_print "Updating al-boot" "to SPI"; tftpboot ${loadaddr} ${tftpdir}boot.img; if test $? -ne 0; then run fail; exit; fi;sf probe; sf erase 0 +${filesize}; sf write ${loadaddr} 0 ${filesize}; echo bootupd done;echo Notice: Changes in default environment variables will only take effect once the;echo environment variables are deleted from flash using the 'delenv' script;lcd_print "Done"
+cpu=armv8
+cvos_tags=0x01000000
+cvos_tags_seed_a=0x01000004
+cvos_tags_seed_b=0x01000008
+cvos_tags_validate=mw.l ${cvos_tags} 0xcf05cf05
+delenv=is_nand_boot; if test $? -eq 0; then run delenvspi; else; run delenvnand; fi
+delenvnand=lcd_print "Deleting env..."; nand erase ${env_offset} 2000; if test -n ${env_offset_redund}; then nand erase ${env_offset_redund} 2000; fi;lcd_print "Done"
+delenvspi=lcd_print "Deleting env..."; sf probe; sf erase ${env_offset} +2000;if test -n ${env_offset_redund}; then sf erase ${env_offset_redund} +2000;fi;lcd_print "Done"
+dt_filename=dt.img
+dt_is_from_toc=1
+dt_location=81000
+dtupd=is_nand_boot; if test $? -eq 0; then run dtupdspi; else; run dtupdnand; fi
+dtupdnand=lcd_print "Updating DT" "to NAND"; tftpboot $loadaddr_dt ${tftpdir}${dt_filename};if test $? -ne 0; then run fail; exit; fi;if test ${dt_is_from_toc} != 1; then; else flash_contents_obj_read_mem $loadaddr $loadaddr_dt;if test $? -ne 0; then run fail; exit; fi;fi;nand set_partition_offset $nand_pt_addr_al_boot;nand erase.spread ${dt_location} 10000; nand write ${loadaddr_dt} ${dt_location} 10000; lcd_print "Done"
+dtupdspi=lcd_print "Updating DT" "to SPI"; tftpboot $loadaddr_dt ${tftpdir}${dt_filename};if test $? -ne 0; then run fail; exit; fi;if test ${dt_is_from_toc} != 1; then; else flash_contents_obj_read_mem $loadaddr $loadaddr_dt;if test $? -ne 0; then run fail; exit; fi;fi;sf probe; sf erase ${dt_location} +${filesize}; sf write ${loadaddr_dt} ${dt_location} ${filesize};echo dtupd done;lcd_print "Done"
+dualboot=run bootnand;echo "Failed to boot from nand, try spi";run bootspi;echo "Failed to boot from spi"
+eepromupd=confirm_msg "Perform EEPROM update? [y/n] ";if test $? -ne 0; then exit; fi;tftpboot ${tftpdir}eeprom.bin;if test $? -ne 0; then exit; fi;i2c probe ${pld_i2c_addr};if test $? -ne 0; then exit; fi;i2c write $fileaddr ${pld_i2c_addr} 0.2 $filesize;if test $? -ne 0; then exit;fi;echo eepromupd done
+env_offset=1c0000
+env_offset_redund=1d0000
+eth1addr=f4:92:bf:86:27:2c
+eth2addr=f6:92:bf:86:27:2c
+ethact=al_eth1
+ethprime=al_eth1
+fail=echo Failed!; lcd_print "Failed!"
+fdt_high=0xffffffffffffffff
+fdtaddr=3b37010
+fwupd=tftpboot ${tftpdir}uboot_script_fw_update.bin;source ${loadaddr}
+kernelupd=lcd_print "Updating kernel...";tftpboot $loadaddr_payload ${tftpdir}uImage;if test $? -ne 0; then run fail; exit; fi;nand set_partition_offset $nand_pt_addr_kernel;mw.l $loadaddr $filesize;incenv filesize 4;nand erase.spread $nand_pt_addr_kernel $filesize;nand write $loadaddr $nand_pt_addr_kernel $filesize;nand set_partition_offset $nand_pt_addr_al_boot;echo kernelupd done;lcd_print "Done"
+loadaddr=0x08000000
+loadaddr_dt=0x04078000
+loadaddr_payload=0x08000004
+loadaddr_rootfs_chk=0x07000000
+loadbootargs=setenv bootargs pci=pcie_bus_perf console=ttyS0,115200 model=unas_4b $bootargsextra; printenv bootargs
+macload=setenv offset 0x10000000 ;sf probe; sf read $offset 0x001f0000 12;setmac $offset 2 ea16 ;setenv offset ; saveenv
+nand_pt_addr_al_boot=0x0
+nand_pt_addr_kernel=0x00300000
+nand_pt_size_al_boot=0x00200000
+nand_pt_size_kernel=0x01000000
+pld_i2c_addr=57
+preboot=gpio clear 37;i2c dev 4;i2c mw 0x2e 0x5c 0xe8;i2c mw 0x2e 0x5d 0xe8;i2c mw 0x2e 0x5e 0xe8;i2c mw 0x2e 0x30 0x50;i2c mw 0x2e 0x31 0x50;i2c mw 0x2e 0x32 0x50;run macload;
+skip_eth_halt=0
+soc=alpine_v2
+spi_pt_addr_kernel=0x00200000
+spi_pt_size_kernel=0x01000000
+spikernelupd=lcd_print "Updating kernel...";tftpboot $loadaddr_payload ${tftpdir}uImage;if test $? -ne 0; then run fail; exit; fi;mw.l $loadaddr $filesize;incenv filesize 4;sf probe;sf erase $spi_pt_addr_kernel $spi_pt_size_kernel;sf write $loadaddr $spi_pt_addr_kernel $filesize;echo spikernelupd done;lcd_print "Done"
+vendor=annapurna-labs
+
+Environment size: 5825/16379 bytes
+
+############################################
+
+ALPINE_UBNT_NAS> gpio show all
+gpio: pin all (gpio 0) value is 1
+
+############################################
+
+ALPINE_UBNT_NAS> i2c bus
+Bus 0:	dw_0
+Bus 1:	dw_0->PCA9548@0x71:0
+Bus 2:	dw_0->PCA9548@0x71:1
+Bus 3:	dw_0->PCA9548@0x71:2
+Bus 4:	dw_0->PCA9548@0x71:3
+Bus 5:	dw_0->PCA9548@0x71:4
+Bus 6:	dw_0->PCA9548@0x71:5
+Bus 7:	dw_0->PCA9548@0x71:6
+Bus 8:	dw_0->PCA9548@0x71:7
+
+############################################
+
+ALPINE_UBNT_NAS> i2c dev
+Current bus is 4
+
+############################################
+
+ALPINE_UBNT_NAS> i2c probe
+Valid chip addresses: 20 21 2E 57 71
+
+############################################
+
+ALPINE_UBNT_NAS> i2c speed
+Current bus speed=100000
+
+############################################
+
+ALPINE_UBNT_NAS> i2c sda-hold-time
+Current SDA hold time=300
+
+############################################
+
+ALPINE_UBNT_NAS> is_nand_boot
+
+############################################ $?
+0
+
+############################################
+
+ALPINE_UBNT_NAS> mdio list
+al_eth1:
+al_eth2:
+
+############################################
+
+ALPINE_UBNT_NAS> nand info
+
+Device 0: nand0, sector size 256 KiB
+  Page size       4096 b
+  OOB size         224 b
+  Erase size    262144 b
+  subpagesize     4096 b
+  options     0x     200
+  bbt options 0x       0
+
+############################################
+
+ALPINE_UBNT_NAS> nand bad
+
+Device 0 bad blocks:
+
+############################################
+
+ALPINE_UBNT_NAS> pca953x info
+pca953x@ 0x21 (16 pins):
+
+gpio pins: fedcba9876543210
+---------------------------
+conf:      ooooiiiiiiiioooo
+invert:    0000000000000000
+input:     0000000000000000
+output:    0000111111110000
+
+############################################
+
+ALPINE_UBNT_NAS> pci
+Scanning PCI devices on bus 0
+BusDevFun  VendorId   DeviceId   Device Class       Sub-Class
+_____________________________________________________________
+00.01.00   0x1c36     0x0001     Network controller      0x00
+00.02.00   0x1c36     0x0002     Network controller      0x00
+00.04.00   0x1c36     0x0022     Cryptographic device    0x00
+00.05.00   0x1c36     0x0022     Mass storage controller 0x04
+00.08.00   0x1c36     0x0031     Mass storage controller 0x06
+00.09.00   0x1c36     0x0031     Mass storage controller 0x06
+
+############################################
+
+ALPINE_UBNT_NAS> printenv
+arch=arm
+autoload=n
+board=alpine_ubnt
+board_name=alpine_ubnt
+boot_instance_active=0
+boot_instance_non_active=1
+bootcmd=cp.b $fdtaddr $loadaddr_dt 7ffc; fdt addr $loadaddr_dt; run loadbootargs; run dualboot
+bootdelay=2
+bootnand=lcd_print "Loading OS from nand ...";nand set_partition_offset $nand_pt_addr_kernel;nand read $loadaddr $nand_pt_addr_kernel 4;setenvmem filesize $loadaddr;incenv filesize 4;nand read $loadaddr $nand_pt_addr_kernel $filesize;nand set_partition_offset $nand_pt_addr_al_boot;bootm $loadaddr_payload - $fdtaddr;lcd_print bootnand Failed!
+bootspi=lcd_print "Loading OS from spi...";sf probe;sf read $loadaddr $spi_pt_addr_kernel 4;setenvmem filesize $loadaddr;incenv filesize 4;sf read $loadaddr $spi_pt_addr_kernel $filesize;bootm $loadaddr_payload - $fdtaddr;lcd_print bootspi Failed!
+boottftp=lcd_print "Loading OS...";tftpboot $loadaddr ${tftpdir}${dt_filename};if test $? -ne 0; then run fail; exit; fi;if test ${dt_is_from_toc} != 1; then; else flash_contents_obj_read_mem $loadaddr_dt $loadaddr;if test $? -ne 0; then run fail; exit; fi;fi;tftpboot $loadaddr ${tftpdir}uImage;if test $? -ne 0; then run fail; exit; fi;fdt addr $loadaddr_dt;bootm $loadaddr - $fdtaddr;run fail; exit
+bootupd=is_nand_boot; if test $? -eq 0; then run bootupdspi; else; run bootupdnand; fi
+bootupdnand=lcd_print "Updating al-boot" "to NAND"; tftpboot $loadaddr ${tftpdir}boot.img; if test $? -ne 0; then run fail; exit; fi;nand set_partition_offset $nand_pt_addr_al_boot;nand erase.spread $nand_pt_addr_al_boot $filesize; nand write $loadaddr $nand_pt_addr_al_boot $filesize; lcd_print "Done"
+bootupdspi=lcd_print "Updating al-boot" "to SPI"; tftpboot ${loadaddr} ${tftpdir}boot.img; if test $? -ne 0; then run fail; exit; fi;sf probe; sf erase 0 +${filesize}; sf write ${loadaddr} 0 ${filesize}; echo bootupd done;echo Notice: Changes in default environment variables will only take effect once the;echo environment variables are deleted from flash using the 'delenv' script;lcd_print "Done"
+cpu=armv8
+cvos_tags=0x01000000
+cvos_tags_seed_a=0x01000004
+cvos_tags_seed_b=0x01000008
+cvos_tags_validate=mw.l ${cvos_tags} 0xcf05cf05
+delenv=is_nand_boot; if test $? -eq 0; then run delenvspi; else; run delenvnand; fi
+delenvnand=lcd_print "Deleting env..."; nand erase ${env_offset} 2000; if test -n ${env_offset_redund}; then nand erase ${env_offset_redund} 2000; fi;lcd_print "Done"
+delenvspi=lcd_print "Deleting env..."; sf probe; sf erase ${env_offset} +2000;if test -n ${env_offset_redund}; then sf erase ${env_offset_redund} +2000;fi;lcd_print "Done"
+dt_filename=dt.img
+dt_is_from_toc=1
+dt_location=81000
+dtupd=is_nand_boot; if test $? -eq 0; then run dtupdspi; else; run dtupdnand; fi
+dtupdnand=lcd_print "Updating DT" "to NAND"; tftpboot $loadaddr_dt ${tftpdir}${dt_filename};if test $? -ne 0; then run fail; exit; fi;if test ${dt_is_from_toc} != 1; then; else flash_contents_obj_read_mem $loadaddr $loadaddr_dt;if test $? -ne 0; then run fail; exit; fi;fi;nand set_partition_offset $nand_pt_addr_al_boot;nand erase.spread ${dt_location} 10000; nand write ${loadaddr_dt} ${dt_location} 10000; lcd_print "Done"
+dtupdspi=lcd_print "Updating DT" "to SPI"; tftpboot $loadaddr_dt ${tftpdir}${dt_filename};if test $? -ne 0; then run fail; exit; fi;if test ${dt_is_from_toc} != 1; then; else flash_contents_obj_read_mem $loadaddr $loadaddr_dt;if test $? -ne 0; then run fail; exit; fi;fi;sf probe; sf erase ${dt_location} +${filesize}; sf write ${loadaddr_dt} ${dt_location} ${filesize};echo dtupd done;lcd_print "Done"
+dualboot=run bootnand;echo "Failed to boot from nand, try spi";run bootspi;echo "Failed to boot from spi"
+eepromupd=confirm_msg "Perform EEPROM update? [y/n] ";if test $? -ne 0; then exit; fi;tftpboot ${tftpdir}eeprom.bin;if test $? -ne 0; then exit; fi;i2c probe ${pld_i2c_addr};if test $? -ne 0; then exit; fi;i2c write $fileaddr ${pld_i2c_addr} 0.2 $filesize;if test $? -ne 0; then exit;fi;echo eepromupd done
+env_offset=1c0000
+env_offset_redund=1d0000
+eth1addr=f4:92:bf:86:27:2c
+eth2addr=f6:92:bf:86:27:2c
+ethact=al_eth1
+ethprime=al_eth1
+fail=echo Failed!; lcd_print "Failed!"
+fdt_high=0xffffffffffffffff
+fdtaddr=3b37010
+fwupd=tftpboot ${tftpdir}uboot_script_fw_update.bin;source ${loadaddr}
+kernelupd=lcd_print "Updating kernel...";tftpboot $loadaddr_payload ${tftpdir}uImage;if test $? -ne 0; then run fail; exit; fi;nand set_partition_offset $nand_pt_addr_kernel;mw.l $loadaddr $filesize;incenv filesize 4;nand erase.spread $nand_pt_addr_kernel $filesize;nand write $loadaddr $nand_pt_addr_kernel $filesize;nand set_partition_offset $nand_pt_addr_al_boot;echo kernelupd done;lcd_print "Done"
+loadaddr=0x08000000
+loadaddr_dt=0x04078000
+loadaddr_payload=0x08000004
+loadaddr_rootfs_chk=0x07000000
+loadbootargs=setenv bootargs pci=pcie_bus_perf console=ttyS0,115200 model=unas_4b $bootargsextra; printenv bootargs
+macload=setenv offset 0x10000000 ;sf probe; sf read $offset 0x001f0000 12;setmac $offset 2 ea16 ;setenv offset ; saveenv
+nand_erasesize=40000
+nand_oobsize=e0
+nand_pt_addr_al_boot=0x0
+nand_pt_addr_kernel=0x00300000
+nand_pt_size_al_boot=0x00200000
+nand_pt_size_kernel=0x01000000
+nand_writesize=1000
+pld_i2c_addr=57
+preboot=gpio clear 37;i2c dev 4;i2c mw 0x2e 0x5c 0xe8;i2c mw 0x2e 0x5d 0xe8;i2c mw 0x2e 0x5e 0xe8;i2c mw 0x2e 0x30 0x50;i2c mw 0x2e 0x31 0x50;i2c mw 0x2e 0x32 0x50;run macload;
+skip_eth_halt=0
+soc=alpine_v2
+spi_pt_addr_kernel=0x00200000
+spi_pt_size_kernel=0x01000000
+spikernelupd=lcd_print "Updating kernel...";tftpboot $loadaddr_payload ${tftpdir}uImage;if test $? -ne 0; then run fail; exit; fi;mw.l $loadaddr $filesize;incenv filesize 4;sf probe;sf erase $spi_pt_addr_kernel $spi_pt_size_kernel;sf write $loadaddr $spi_pt_addr_kernel $filesize;echo spikernelupd done;lcd_print "Done"
+vendor=annapurna-labs
+
+Environment size: 5888/16379 bytes
+
+############################################
+
+ALPINE_UBNT_NAS> sf probe
+SF: Detected MX25U25635F with page size 256 Bytes, erase size 4 KiB, total 32 MiB
+
+############################################
+
+ALPINE_UBNT_NAS> showvar
+HUSH_VERSION=0.01
+
+############################################
+
+ALPINE_UBNT_NAS> thermal_init
+ALPINE_UBNT_NAS> thermal_get
+temprature: 44 degrees
+
+############################################
+
+ALPINE_UBNT_NAS> version
+
+U-Boot 2015.07-alpine_db-2.21-HAL (Dec 11 2019 - 03:05:06 +0800)
+aarch64-linux-gnu-gcc (Debian 6.3.0-18) 6.3.0 20170516
+GNU ld (GNU Binutils for Debian) 2.28
+
+############################################
+

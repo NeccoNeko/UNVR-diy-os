@@ -1,0 +1,144 @@
+# inxi -S
+System:    Host: UniFi-NVR Kernel: 4.1.37-ubnt aarch64 (32 bit) Console: tty 0
+           Distro: Debian GNU/Linux 9 (stretch)
+
+# inxi -M
+Machine:   No /sys/class/dmi; using dmidecode: no smbios data available. Old system?
+
+# inxi -C
+CPU:       Quad core  (-MCP-) (ARM) 
+           clock speeds: 1: 116 MHz 2: 116 MHz 3: 116 MHz 4: 116 MHz
+
+# inxi -G
+Graphics:  Card: Failed to Detect Video Card!
+           Display Server: N/A driver: N/A tty size: 162x71 Advanced Data: N/A for root out of X
+
+# inxi -A
+
+# inxi -N
+Network:   Card-1: Annapurna Labs Gigabit Ethernet Adapter driver: al_eth
+           Card-2: Annapurna Labs SFP+ 10G Ethernet Adapter driver: al_eth
+
+# inxi -D
+Drives:    HDD Total Size: NA (-)
+           ID-1: USB /dev/sdq model: UF3_8GB size: 7.9GB
+
+# inxi -b 
+System:    Host: UniFi-NVR Kernel: 4.1.37-ubnt aarch64 (32 bit) Console: tty 0
+           Distro: Debian GNU/Linux 9 (stretch)
+Machine:   No /sys/class/dmi; using dmidecode: no smbios data available. Old system?
+CPU:       Quad core  (-MCP-) speed: 116 MHz
+Graphics:  Card: Failed to Detect Video Card!
+           Display Server: N/A driver: N/A tty size: 162x71 Advanced Data: N/A for root out of X
+Network:   Card-1: Annapurna Labs Gigabit Ethernet Adapter driver: al_eth
+           Card-2: Annapurna Labs SFP+ 10G Ethernet Adapter driver: al_eth
+Drives:    HDD Total Size: NA (-)
+Info:      Processes: 137 Uptime: 1:01 Memory: 338.9/3885.9MB Init: systemd runlevel: 3
+           Client: Shell (bash) inxi: 2.3.5 
+
+# inxi -p
+Partition: ID-1: /mnt/.rwfs size: 7.3G used: 923M (14%) fs: ext4 dev: /dev/sdq
+           ID-2: / size: 7.3G used: 923M (14%) fs: overlay dev: N/A
+
+# inxi -I
+Info:      Processes: 138 Uptime: 1:01 Memory: 338.8/3885.9MB Init: systemd runlevel: 3
+           Client: Shell (bash) inxi: 2.3.5 
+
+# inxi -t c 
+Processes: CPU: % used - top 5 active
+           1: cpu: 0.2% command: node pid: 1044
+           2: cpu: 0.1% command: init pid: 1
+           3: cpu: 0.0% command: mpstat pid: 13970
+           4: cpu: 0.0% daemon: ~kworker/0:1~ pid: 13727
+           5: cpu: 0.0% daemon: ~kworker/u9:3~ pid: 10822
+
+# inxi -t m
+Processes: Memory: MB / % used - Used/Total: 339.2/3885.9MB - top 5 active
+           1: mem: 122.98MB (3.1%) command: node pid: 1044
+           2: mem: 43.02MB (1.1%) command: ulp-go-app pid: 1039
+           3: mem: 21.51MB (0.5%) command: postgres pid: 876
+           4: mem: 17.89MB (0.4%) command: nasagent pid: 878
+           5: mem: 15.59MB (0.4%) command: ulogo-switchd (started by: python3) pid: 1221
+
+# inxi -t cm
+Processes: CPU: % used - top 5 active
+           1: cpu: 0.2% command: node pid: 1044
+           2: cpu: 0.1% command: init pid: 1
+           3: cpu: 0.0% command: mpstat pid: 13970
+           4: cpu: 0.0% daemon: ~kworker/0:1~ pid: 13727
+           5: cpu: 0.0% daemon: ~kworker/u9:3~ pid: 10822
+           Memory: MB / % used - Used/Total: 338.4/3885.9MB - top 5 active
+           1: mem: 122.98MB (3.1%) command: node pid: 1044
+           2: mem: 43.02MB (1.1%) command: ulp-go-app pid: 1039
+           3: mem: 21.51MB (0.5%) command: postgres pid: 876
+           4: mem: 17.89MB (0.4%) command: nasagent pid: 878
+           5: mem: 15.59MB (0.4%) command: ulogo-switchd (started by: python3) pid: 1221
+
+# inxi -t cm10
+Processes: CPU: % used - top 10 active
+           1: cpu: 0.2% command: node pid: 1044
+           2: cpu: 0.1% command: init pid: 1
+           3: cpu: 0.0% command: mpstat pid: 13970
+           4: cpu: 0.0% daemon: ~kworker/0:1~ pid: 13727
+           5: cpu: 0.0% daemon: ~kworker/u9:3~ pid: 10822
+           6: cpu: 0.0% daemon: ~kworker/u9:0~ pid: 10758
+           7: cpu: 0.0% daemon: ~kworker/0:0~ pid: 9684
+           8: cpu: 0.0% daemon: ~kworker/0:2~ pid: 4589
+           9: cpu: 0.0% daemon: ~kworker/u9:2~ pid: 4396
+           10: cpu: 0.0% daemon: ~kworker/u9:1~ pid: 4395
+           Memory: MB / % used - Used/Total: 339.2/3885.9MB - top 10 active
+           1: mem: 122.98MB (3.1%) command: node pid: 1044
+           2: mem: 43.02MB (1.1%) command: ulp-go-app pid: 1039
+           3: mem: 21.51MB (0.5%) command: postgres pid: 876
+           4: mem: 17.89MB (0.4%) command: nasagent pid: 878
+           5: mem: 15.59MB (0.4%) command: ulogo-switchd (started by: python3) pid: 1221
+           6: mem: 13.95MB (0.3%) command: syslog-ng pid: 832
+           7: mem: 13.63MB (0.3%) command: postgres: pid: 1058
+           8: mem: 13.43MB (0.3%) command: postgres: pid: 1059
+           9: mem: 8.82MB (0.2%) command: systemd-journald pid: 443
+           10: mem: 7.98MB (0.2%) command: init pid: 1
+
+# inxi -Nni
+Network:   Card-1: Annapurna Labs Gigabit Ethernet Adapter driver: al_eth
+           IF: enp0s1 state: up speed: 1000 Mbps duplex: full mac: f4:92:bf:86:27:2c
+           Card-2: Annapurna Labs SFP+ 10G Ethernet Adapter driver: al_eth
+           IF: enp0s2 state: down mac: f6:92:bf:86:27:2c
+           WAN IP: 67.181.232.132 IF: enp0s1 ip-v4: 10.1.2.121
+           IF: enp0s2 ip-v4: N/A IF: sit0@NONE ip-v4: N/A
+
+# inxi -s
+Sensors:   System Temperatures: cpu: 39.8C mobo: N/A
+           Fan Speeds (in rpm): cpu: 1834 fan-2: 1726 fan-3: 1779 fan-4: 0
+
+# inxi -r 
+Repos:     Active apt sources in file: /etc/apt/sources.list
+           deb http://deb.debian.org/debian/ stretch main contrib non-free
+           deb http://deb.debian.org/debian/ stretch-updates main contrib non-free
+           deb http://deb.debian.org/debian/ stretch-backports main
+           deb http://security.debian.org/ stretch/updates main contrib non-free
+           Active apt sources in file: /etc/apt/sources.list.d/ubnt-unifi.list
+           deb http://www.ubnt.com/downloads/unifi/debian cloudkey-stable ubiquiti
+           Active apt sources in file: /etc/apt/sources.list.d/ubnt.list
+           deb https://ubnt.bintray.com/apt stretch main release
+
+# inxi -F 
+System:    Host: UniFi-NVR Kernel: 4.1.37-ubnt aarch64 (32 bit) Console: tty 0
+           Distro: Debian GNU/Linux 9 (stretch)
+Machine:   No /sys/class/dmi; using dmidecode: no smbios data available. Old system?
+CPU:       Quad core  (-MCP-) (ARM) 
+           clock speeds: 1: 116 MHz 2: 116 MHz 3: 116 MHz 4: 116 MHz
+Graphics:  Card: Failed to Detect Video Card!
+           Display Server: N/A driver: N/A tty size: 162x71 Advanced Data: N/A for root out of X
+Network:   Card-1: Annapurna Labs Gigabit Ethernet Adapter driver: al_eth
+           IF: enp0s1 state: up speed: 1000 Mbps duplex: full mac: f4:92:bf:86:27:2c
+           Card-2: Annapurna Labs SFP+ 10G Ethernet Adapter driver: al_eth
+           IF: enp0s2 state: down mac: f6:92:bf:86:27:2c
+Drives:    HDD Total Size: NA (-)
+           ID-1: USB /dev/sdq model: UF3_8GB size: 7.9GB
+Partition: ID-1: / size: 7.3G used: 923M (14%) fs: overlay dev: N/A
+RAID:      No RAID devices: /proc/mdstat, md_mod kernel module present
+Sensors:   System Temperatures: cpu: 39.8C mobo: N/A
+           Fan Speeds (in rpm): cpu: 1834 fan-2: 1726 fan-3: 1779 fan-4: 0
+Info:      Processes: 138 Uptime: 1:01 Memory: 338.8/3885.9MB Init: systemd runlevel: 3
+           Client: Shell (bash) inxi: 2.3.5 
+

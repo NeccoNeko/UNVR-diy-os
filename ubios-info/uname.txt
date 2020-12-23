@@ -1,0 +1,1 @@
+Linux UniFi-NVR 4.1.37-ubnt #4 SMP Sat Mar 7 05:22:19 CST 2020 aarch64 GNU/Linux
